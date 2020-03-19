@@ -1,0 +1,4 @@
+---
+- include: 01_installs.yml 
+- include: 02_mysql_db.yml
+- include: 03_wordpress.yml 
