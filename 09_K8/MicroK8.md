@@ -12,7 +12,13 @@ sudo apt-get install iptables
 ```bash
 sudo snap install microk8s --classic --edge
 ```
-## Check Status
+## Enable Services
 ```bash
-sudo microk8s.status --wait-ready
+sudo microk8s.enable dns dashboard registry
+```
+## Start
+```bash
+sudo microk8s.start
+# inspect
+sudo microk8s.inspect
 ```
