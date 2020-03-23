@@ -1,7 +1,12 @@
 # MicroK8: Installation on Ubuntu
-## Install snap
+## Prerequisites
+### Install snap
 ```bash
 sudo apt install snapd
+```
+### Install IPTables
+```bash
+sudo apt-get install iptables
 ```
 ## Install MicroK8
 ```bash
