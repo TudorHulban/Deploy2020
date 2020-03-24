@@ -10,6 +10,8 @@ sudo snap install microk8s --classic
 ## Enable Services
 ```bash
 sudo microk8s.enable dns dashboard registry
+# check
+sudo microk8s.kubectl get services
 ```
 ## Start
 ```bash
