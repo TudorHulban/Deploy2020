@@ -23,6 +23,10 @@ sudo.microk8s.status
 ```bash
 microk8s.kubectl get nodes
 ```
+### Get namespaces
+```bash
+microk8s.kubectl get namespace
+```
 ## Sample app
 ### Install
 ```bash
