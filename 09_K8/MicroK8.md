@@ -46,5 +46,6 @@ microk8s.kubectl delete deployment <deployment to delete>
 ```
 ## Resources
 ```html
+https://microk8s.io/docs/
 https://kubernetes.io/blog/2019/11/26/running-kubernetes-locally-on-linux-with-microk8s/
 ```
