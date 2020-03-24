@@ -79,5 +79,6 @@ microk8s.kubectl apply -f filename.yml
 ## Resources
 ```html
 https://microk8s.io/docs/
+https://github.com/ubuntu/microk8s/blob/master/docs/community.md
 https://kubernetes.io/blog/2019/11/26/running-kubernetes-locally-on-linux-with-microk8s/
 ```
