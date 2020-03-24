@@ -1,4 +1,4 @@
-# MicroK8: Installation on Ubuntu
+# MicroK8: Installation on Ubuntu VM
 ## Prerequisites
 ```bash
 sudo apt install snapd iptables
@@ -16,6 +16,7 @@ sudo microk8s.enable dns dashboard registry
 sudo microk8s.start
 # inspect
 sudo microk8s.inspect
+sudo.microk8s.status
 ```
 ## Resources
 ```html
