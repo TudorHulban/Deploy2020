@@ -18,6 +18,11 @@ sudo microk8s.start
 sudo microk8s.inspect
 sudo.microk8s.status
 ```
+## Operations
+### Get nodes
+```bash
+microk8s.kubectl get nodes
+```
 ## Resources
 ```html
 https://kubernetes.io/blog/2019/11/26/running-kubernetes-locally-on-linux-with-microk8s/
