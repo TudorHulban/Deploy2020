@@ -1,10 +1,11 @@
-#### User settings
+# Neovim: Configuration
+## User settings
 ```bash
 :checkhealth
 # file name : init.vim
 # file path ~/.config/nvim/init.vim
 ```
-#### Plugin install
+## Plugin install
 **Git** (sudo apt install git) needed as dependency.
 ```vim
 mkdir -p ~/.config/nvim/autoload
@@ -12,7 +13,20 @@ cd ~/.config/nvim/autoload
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # in nvim, :PlugInstall and :PlugStatus to install and check on plugins. 
 ```
-#### Sample configuration
+## Minimal Configuration
+```bash
+syntax on
+set number
+
+let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
+let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')
+
+call plug#begin(g:PLUGIN_HOME)
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+call plug#end()
+```
+## Sample configuration
 ```bash
   syntax on                                                                                                    
   set number relativenumber
