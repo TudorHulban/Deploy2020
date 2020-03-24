@@ -5,7 +5,7 @@ sudo apt install snapd iptables
 ```
 ## Install MicroK8
 ```bash
-sudo snap install microk8s --classic --edge
+sudo snap install microk8s --classic
 ```
 ## Enable Services
 ```bash
