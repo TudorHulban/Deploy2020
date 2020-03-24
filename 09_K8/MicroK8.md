@@ -28,6 +28,10 @@ microk8s.kubectl get nodes
 microk8s.kubectl get namespace
 microk8s.kubectl delete namespace <Namespace name>
 ```
+### Config
+```bash
+microk8s.config
+```
 ## Sample app
 ### Install
 ```bash
