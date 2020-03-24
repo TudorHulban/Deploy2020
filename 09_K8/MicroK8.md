@@ -32,7 +32,7 @@ microk8s.kubectl delete namespace <Namespace name>
 ```bash
 microk8s.config
 ```
-## Sample app
+## Sample app 1
 ### Install
 ```bash
 microk8s.kubectl create deployment nginx --image=nginx
@@ -43,6 +43,36 @@ microk8s.kubectl get pods
 ```bash
 microk8s.kubectl get deployment 
 microk8s.kubectl delete deployment <deployment to delete>
+```
+## Sample app 2
+### Configuration
+Save to filename.yml.
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: mynginx:local
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+```
+### Use
+```bash
+microk8s.kubectl apply -f filename.yml
 ```
 ## Resources
 ```html
