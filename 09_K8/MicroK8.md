@@ -23,9 +23,10 @@ sudo.microk8s.status
 ```bash
 microk8s.kubectl get nodes
 ```
-### Get namespaces
+### Namespaces
 ```bash
 microk8s.kubectl get namespace
+microk8s.kubectl delete namespace <Namespace name>
 ```
 ## Sample app
 ### Install
