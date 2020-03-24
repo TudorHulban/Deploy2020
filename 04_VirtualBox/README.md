@@ -4,6 +4,8 @@
 su -
 apt install build-essential dkms unzip wget sudo
 wget https://download.virtualbox.org/virtualbox/6.1.2/virtualbox-6.1_6.1.2-135662~Debian~buster_amd64.deb
+# for Ubuntu
+wget https://download.virtualbox.org/virtualbox/6.1.4/virtualbox-6.1_6.1.4-136177~Ubuntu~bionic_amd64.deb
 gdebi virtualbox-6.1_6.1.2-135662~Debian~buster_amd64.deb 
 ```
 ### Check service status
