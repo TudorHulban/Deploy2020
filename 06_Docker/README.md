@@ -135,6 +135,8 @@ docker ps -a
 #### Start container
 ```bash
 docker start <container ID>
+# get logs
+docker logs <container ID>
 ```
 #### Stop container
 ```bash
