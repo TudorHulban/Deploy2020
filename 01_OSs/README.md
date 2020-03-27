@@ -83,7 +83,10 @@ sudo apt install \
       libwine:i386 \
       fonts-wine
 ```
-
+### Move file from subfolders to upper folder
+```hash
+find -name *.mp4 -exec mv {} . \;
+```
 ## Comms <a name="comms"></a> ([Up](#top))
 ### USB Tethering
 ```bash
