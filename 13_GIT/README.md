@@ -16,3 +16,7 @@ http://www.scootersoftware.com/download.php?zz=kb_linux_install
 ```bash
 git diff HEAD^ HEAD Makefile
 ```
+## Resources
+```
+https://www.devroom.io/2009/10/26/how-to-create-and-apply-a-patch-with-git/
+```
