@@ -19,4 +19,5 @@ git diff HEAD^ HEAD Makefile
 ## Resources
 ```
 https://www.devroom.io/2009/10/26/how-to-create-and-apply-a-patch-with-git/
+https://www.devroom.io/2020/03/09/the-git-submodule-cheat-sheet/
 ```
