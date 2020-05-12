@@ -12,3 +12,7 @@ https://github.com/kelseyhightower/kubernetes-the-hard-way
 ```html
 https://linuxhint.com/install-minikube-ubuntu/
 ```
+### Resources
+```
+https://helm.sh/docs/chart_best_practices/templates/
+```
