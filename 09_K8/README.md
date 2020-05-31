@@ -7,12 +7,11 @@ https://www.sayem.org/k8s-on-lxd/
 https://www.techrepublic.com/article/how-to-quickly-install-kubernetes-on-ubuntu/
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 https://github.com/kelseyhightower/kubernetes-the-hard-way
+https://helm.workshop.flagger.dev/
+https://helm.sh/docs/chart_best_practices/templates/
 ```
 ### MiniKube
 ```html
 https://linuxhint.com/install-minikube-ubuntu/
 ```
-### Resources
-```
-https://helm.sh/docs/chart_best_practices/templates/
-```
+
