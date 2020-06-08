@@ -39,10 +39,16 @@ sudo dpkg-reconfigure tzdata
 ## 6. Move to no subscription repo
 ```bash
 vi /etc/apt/sources.list.d/pve-enterprise.list # change to pve-no-subscription
+# change line to
+deb http://download.proxmox.com/debian/pve stretch pve-no-subscription
+```
+### To upgrade
+```
+apt-get dist-upgrade
 ```
 Resources:
 ```html
-https://thebiglaskowski.com/2019/01/20/proxmox-ve-no-subscription-repository.html
+https://www.caretech.io/2018/06/08/how-to-update-proxmox-without-buying-a-subscription/
 ```
 ## 7. Connect to container, attach to container from Proxmox shell:
 ```bash
