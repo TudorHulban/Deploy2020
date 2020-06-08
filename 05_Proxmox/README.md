@@ -10,7 +10,7 @@ https://192.168.1.6:8006/#v1:0:18:4::::::
 ## 2. Get container images with
 ```bash
 pveam available
-pveam download  local debian-9.0-standard_9.5-1_amd64.tar.gz # download container
+pveam download  local debian-10.0-standard_10.0-1_amd64.tar.gz # download container
 pveam list local  # verify download
 ```
 In case needed, to remove local image:
