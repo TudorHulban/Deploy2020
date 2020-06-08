@@ -40,10 +40,11 @@ sudo dpkg-reconfigure tzdata
 ```bash
 vi /etc/apt/sources.list.d/pve-enterprise.list # change to pve-no-subscription
 # change line to
-deb http://download.proxmox.com/debian/pve stretch pve-no-subscription
+deb http://download.proxmox.com/debian/pve buster pve-no-subscription
 ```
 ### To upgrade
 ```
+apt-get update
 apt-get dist-upgrade
 ```
 Resources:
