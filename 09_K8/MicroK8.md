@@ -5,7 +5,12 @@ sudo apt install snapd iptables
 ```
 ## Install MicroK8
 ```bash
-sudo snap install microk8s --classic
+sudo snap install microk8s --classic --channel=1.18/stable
+```
+Join **microk8s** created group
+```
+sudo usermod -a -G microk8s $USER
+sudo chown -f -R $USER ~/.kube
 ```
 Create shortcut
 ```
