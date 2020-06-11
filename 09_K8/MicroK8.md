@@ -7,6 +7,11 @@ sudo apt install snapd iptables
 ```bash
 sudo snap install microk8s --classic
 ```
+Create shortcut
+```
+vi ~/.bash_aliases
+alias kk='microk8s kubectl'
+```
 ## Enable Services
 ```bash
 sudo microk8s.enable dns dashboard registry
