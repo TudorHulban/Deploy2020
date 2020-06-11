@@ -25,10 +25,10 @@ sudo microk8s.kubectl get services
 ```
 ## Start
 ```bash
-sudo microk8s.start
+sudo microk8s start
 # inspect
-sudo microk8s.inspect
-sudo.microk8s.status
+sudo microk8s inspect
+sudo microk8s status
 ```
 ## Operations
 ### Get nodes
