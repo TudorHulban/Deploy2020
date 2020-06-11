@@ -44,6 +44,10 @@ microk8s.kubectl delete namespace <Namespace name>
 ```bash
 microk8s.config
 ```
+### Get pods
+```
+get pods --all-namespaces
+```
 ## Sample app 1
 ### Install
 ```bash
