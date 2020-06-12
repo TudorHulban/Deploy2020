@@ -67,3 +67,10 @@ For download use:
 ```html
 https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso
 ```
+## 10. Add new disk
+```
+lsblk
+pvcreate /dev/sdnewdisk
+vgcreate newgroup /dev/sdnewdisk
+```
+Add new LVM volume from Proxmox GUI, **Datacenter** -> Storage -> Add: LVM.
