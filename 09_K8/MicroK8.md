@@ -17,6 +17,10 @@ Create shortcut
 vi ~/.bash_aliases
 alias kk='microk8s kubectl'
 ```
+## Install helm
+```
+sudo snap install helm --classic
+```
 ## Enable Services
 ```bash
 sudo microk8s.enable dns dashboard registry
