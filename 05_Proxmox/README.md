@@ -11,6 +11,7 @@ https://192.168.1.6:8006/#v1:0:18:4::::::
 ```bash
 pveam available
 pveam download  local debian-10.0-standard_10.0-1_amd64.tar.gz # download container
+pveam download  local ubuntu-18.04-standard_18.04.1-1_amd64.tar.gz # download container
 pveam list local  # verify download
 ```
 In case needed, to remove local image:
