@@ -1,5 +1,6 @@
 # PROXMOX: Install and first steps
 ## 1. Get Proxmox ISO. Install (needs UEFI)
+For multiple VMs, a network card is needed for each one starting with second VM.
 ```html
 https://www.proxmox.com/en/downloads?task=callelement&format=raw&item_id=452&element=f85c494b-2b32-4109-b8c1-083cca2b7db6&method=download&args[0]=7b03f3ce48b75b7b5c4bbc322dfdb990
 ```
