@@ -1,4 +1,8 @@
 # K8: Installation and first steps
+## Install K8s in LXC
+```
+https://github.com/corneliusweig/kubernetes-lxd
+```
 
 ## Resources
 ```html
