@@ -22,6 +22,11 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 sudo mkdir -p /usr/local/bin/
 sudo install minikube /usr/local/bin/
 ```
+### Start Minikube
+```
+minikube start --driver=<driver_name> # if driver name is not given it would take default driver name
+minikube status
+```
 ### Resources
 ```
 https://medium.com/linagora-engineering/install-k8s-minikube-on-top-of-kvm-on-debian-9-9cd5b646063c
