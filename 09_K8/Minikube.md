@@ -27,6 +27,32 @@ sudo install minikube /usr/local/bin/
 minikube start --driver=<driver_name> # if driver name is not given it would take default driver name
 minikube status
 ```
+### Create Kubernetes Deployment
+```
+kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+```
+Expose it as service
+```
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+# check it is running
+kubectl get pod
+```
+Get URL for the service
+```
+minikube service hello-minikube --url
+```
+Access the URL
+```
+ssh -L 8080:192.168.39.139:32267 tudi@192.168.1.35
+```
+Delete the deployment
+```
+kubectl delete services hello-minikube
+```
+Stop Minikube
+```
+minikube stop
+```
 ### Resources
 ```
 https://medium.com/linagora-engineering/install-k8s-minikube-on-top-of-kvm-on-debian-9-9cd5b646063c
