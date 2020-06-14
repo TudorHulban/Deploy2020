@@ -44,6 +44,9 @@ minikube service hello-minikube --url
 Access the URL
 ```
 ssh -L 8080:192.168.39.139:32267 tudi@192.168.1.35
+# 8080 - local port
+# 192.168.39.139:32267 - URL where service is available
+# tudi@192.168.1.35 - user at IP where Minikube is running
 ```
 Delete the deployment
 ```
