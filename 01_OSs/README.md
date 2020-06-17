@@ -1,4 +1,5 @@
 # Debian: OS Optimizations <a name="top"></a>
+* [OS Version](#os)
 * [Date and Time](#time)
 * [RAM and Disk](#ram)
 * [SSH](#ssh)
@@ -8,6 +9,10 @@
 * [Office](#office)
 * [Development](#dev)
 
+## Check OS version <a name="os"></a> 
+```
+cat /etc/os-release
+```
 ## Date and Time <a name="time"></a> 
 ### Change timezone:
 ```bash
