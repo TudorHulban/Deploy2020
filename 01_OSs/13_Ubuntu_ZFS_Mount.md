@@ -8,3 +8,11 @@ Create pool
 sudo zpool list
 sudo zpool create -f -o ashift=12 maxtor /dev/sdb /dev/sdc /dev/sdd  # raid 0
 ```
+Mount pool
+```
+sudo zfs set mountpoint=/maxtor maxtor
+```
+Change ownership to make it accesible
+```
+sudo chown -R tudi:tudi /maxtor/
+```
