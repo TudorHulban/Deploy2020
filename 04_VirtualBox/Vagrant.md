@@ -7,8 +7,12 @@ sudo gdebi downloaded_file
 ```
 vagrant --version
 ```
-
+## Install disk size plugin
+```
+vagrant plugin install vagrant-disksize
+```
 ## Resources
 ```
 https://www.vagrantup.com/downloads
+https://stackoverflow.com/questions/49822594/vagrant-how-to-specify-the-disk-size#51064467
 ```
