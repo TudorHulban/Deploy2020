@@ -5,7 +5,7 @@ vi ~/.vimrc
 # add
 set number
 syntax on
-colo darkblue # available on most OSs, desert if available
+colo darkblue # available on most OSs, desert if not available
 ```
 ## Install plugin manager
 ```bash
