@@ -17,6 +17,7 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```bash
 syntax on
 set number
+colo darkblue
 
 let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
 let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')
