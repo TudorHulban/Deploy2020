@@ -15,3 +15,7 @@ Build with:
 ```
 vagrant up
 ```
+Needs:
+```
+vagrant plugin install vagrant-disksize
+```
