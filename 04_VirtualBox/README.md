@@ -17,6 +17,18 @@ gdebi virtualbox-6.1_6.1.2-135662~Debian~buster_amd64.deb
  systemctl status vboxdrv
  ```
 ## Headless Manage
+Start headless
+```
+VBoxManage startvm --type headless "vm name"
+```
+Check state of VM
+```
+VBoxManage showvminfo "vm name" | grep "State"
+```
+Get IP
+```
+VBoxManage guestproperty get "vm name" "/VirtualBox/GuestInfo/Net/0/V4/IP"
+```
 ```
 # running VMs
 vboxmanage list runningvms
