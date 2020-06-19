@@ -16,6 +16,14 @@ gdebi virtualbox-6.1_6.1.2-135662~Debian~buster_amd64.deb
 ```bash
  systemctl status vboxdrv
  ```
+## Headless Manage
+```
+# running VMs
+vboxmanage list runningvms
+
+# all VMs
+VBoxManage list vms
+```
 ## Install Extension Pack
 Extension Pack is needed for Remote Display.
 ```bash
