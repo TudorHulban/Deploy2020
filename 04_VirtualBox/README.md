@@ -41,6 +41,10 @@ Stop VM
 ```
 VBoxManage controlvm "vm name" pause|resume|reset|poweroff|savestate
 ```
+Delete VM
+```
+vboxmanage unregistervm "vm name" --delete
+```
 ## Install Extension Pack
 Extension Pack is needed for Remote Display.
 ```bash
