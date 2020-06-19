@@ -29,12 +29,17 @@ Get IP
 ```
 VBoxManage guestproperty get "vm name" "/VirtualBox/GuestInfo/Net/0/V4/IP"
 ```
+List
 ```
 # running VMs
 vboxmanage list runningvms
 
 # all VMs
 VBoxManage list vms
+```
+Stop VM
+```
+VBoxManage controlvm "vm name" pause|resume|reset|poweroff|savestate
 ```
 ## Install Extension Pack
 Extension Pack is needed for Remote Display.
