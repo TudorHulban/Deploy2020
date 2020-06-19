@@ -19,3 +19,7 @@ Needs:
 ```
 vagrant plugin install vagrant-disksize
 ```
+Connect:
+```
+vagrant ssh
+```
