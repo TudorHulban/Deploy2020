@@ -48,9 +48,18 @@ ssh -L 8080:192.168.39.139:32267 tudi@192.168.1.35
 # 192.168.39.139:32267 - URL where service is available
 # tudi@192.168.1.35 - user at IP where Minikube is running
 ```
-Delete the deployment
+#### Delete the deployment
+List resources in namespace
+```
+kubectl get pods --namespace default
+```
+Delete the service
 ```
 kubectl delete services hello-minikube
+```
+In case deployed as deployment delete deployment
+```
+kubectl delete deploy hello-minikube 
 ```
 Stop Minikube
 ```
