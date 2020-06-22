@@ -8,4 +8,5 @@ chmod 700 get_helm.sh
 ## Resources
 ```
 https://helm.sh/docs/intro/install/
+https://semver.org/spec/v2.0.0.html
 ```
