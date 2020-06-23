@@ -12,9 +12,18 @@ helm create tchart
 tree tchart
 ```
 ### Reset 
-Delete all template files.
+Delete all template files or all files.
 ```
 rm -v  tchart/templates/*
+```
+Create Chart.yaml
+```
+apiVersion: v1    
+name: tnginx    
+version: 0.1.0    
+appVersion: 1.0    
+    
+description: nginx test    
 ```
 
 
