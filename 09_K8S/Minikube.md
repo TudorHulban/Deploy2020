@@ -33,7 +33,7 @@ A Deployment brings together ReplicaSets and Pods into a single process to deplo
 
 A ReplicaSet (improved version of a Replication Controller), works with the Kubernetes Master to manage Pods. If a Pod is removed/terminated/crashes/etc then the ReplicaSet will kill the Pod and recreate a new Pod to mantain the configured number of replicas.
 
-A Pod is a container for containers. Most Pods have a 1-to-1 relationship between a Pod and a container.
+A Pod is a container for containers. Most Pods have a 1-to-1 relationship between a Pod and a container. Pods included in a deployment share same label.
 ```
 kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
 ```
