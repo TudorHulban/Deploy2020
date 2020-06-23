@@ -66,6 +66,7 @@ https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-ku
 https://github.com/kelseyhightower/kubernetes-the-hard-way
 https://helm.workshop.flagger.dev/
 https://helm.sh/docs/chart_best_practices/templates/
+https://medium.com/google-cloud/kubernetes-routing-internal-services-through-fqdn-d98db92b79d3
 ```
 
 
