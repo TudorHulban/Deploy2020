@@ -13,6 +13,50 @@ https://linuxhint.com/install-minikube-ubuntu/
 ```
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 ```
+### Example of Kubernetes deployment manifest file
+```
+apiVersion: apps/v1beta1
+kind: Deployment # it is a deployment
+metadata:
+  name: endpoints # name of the Deployment
+  labels:
+    # any Pods with matching labels are included in this Deployment
+    app: kubernetes-series
+    tier: endpoints
+spec:
+  # ReplicaSet specification
+  replicas: 3 # we are making 3 Pods
+  selector:
+    matchLabels:
+      # ReplicaSet labels will match Pods with the following labels
+      tier: endpoints
+  template:
+    # Pod template
+    metadata:
+      labels:
+        # Pod's labels
+        app: kubernetes-series
+        tier: endpoints
+    spec:
+      # Pod specification
+      containers:
+        # the container(s) in this Pod
+        - name: partone-container
+          image: gcr.io/PROJECT_NAME/partone-container:latest
+          # environment variables for the Pod
+          env:
+            - name: GCLOUD_PROJECT
+              value: PROJECT_NAME
+            # we are going to use this later
+            # for now it creates a custom endpoint
+            # for this pod
+            - name: POD_ENDPOINT
+              value: endpoint
+            - name: NODE_ENV
+              value: production
+          ports:
+            - containerPort: 80
+```
 ### Others
 ```html
 https://www.tutorialspoint.com/kubernetes/index.htm
