@@ -38,10 +38,34 @@ A Pod is a container for containers. Most Pods have a 1-to-1 relationship betwee
 kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
 ```
 #### Expose it as service
+With a Deployment we have our Pods replicating properly within the cluster but we have yet to create a way for the world to reach our cluster/Pods. With a Service, a network interface to interact with our Pods is created.
 ```
 kubectl expose deployment hello-minikube --type=NodePort --port=8080
 # check it is running
 kubectl get pod
+```
+Example:
+```
+apiVersion: v1
+kind: Service # a way for the outside world to reach the Pods
+metadata:
+  # any Pods with matching labels are included in this Service
+  name: endpoints
+spec:
+  # Service ports
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      protocol: TCP
+    - name: https
+      port: 443
+      targetPort: 8443
+      protocol: TCP
+  # It includes a LoadBalancer between Pods
+  type: LoadBalancer
+  selector:
+    app: kubernetes-series
 ```
 #### Get URL for the service
 ```
@@ -77,4 +101,5 @@ https://medium.com/linagora-engineering/install-k8s-minikube-on-top-of-kvm-on-de
 https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux
 https://kubernetes.io/docs/tasks/tools/install-minikube/
 https://kubernetes.io/docs/setup/learning-environment/minikube/
+https://medium.com/google-cloud/kubernetes-day-one-30a80b5dcb29
 ```
