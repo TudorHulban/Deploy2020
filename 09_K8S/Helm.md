@@ -4,6 +4,19 @@ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scr
 chmod 700 get_helm.sh
 ./get_helm.sh
 ```
+## Chart LifeCycle
+### Create Chart
+```
+helm create tchart
+# inspect
+tree tchart
+```
+### Reset 
+Delete all template files.
+```
+rm -v  tchart/templates/*
+```
+
 
 ## Resources
 ```
