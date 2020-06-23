@@ -102,4 +102,5 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux
 https://kubernetes.io/docs/tasks/tools/install-minikube/
 https://kubernetes.io/docs/setup/learning-environment/minikube/
 https://medium.com/google-cloud/kubernetes-day-one-30a80b5dcb29
+https://medium.com/google-cloud/kubernetes-dns-proxy-with-services-d7d9e800c329
 ```
