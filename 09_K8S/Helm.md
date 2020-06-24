@@ -11,6 +11,22 @@ helm create tchart
 # inspect
 tree tchart
 ```
+```
+tchart/    
+├── charts    
+├── Chart.yaml    
+├── templates    
+│   ├── deployment.yaml    
+│   ├── _helpers.tpl    
+│   ├── hpa.yaml    
+│   ├── ingress.yaml    
+│   ├── NOTES.txt    
+│   ├── serviceaccount.yaml    
+│   ├── service.yaml    
+│   └── tests    
+│       └── test-connection.yaml    
+└── values.yaml    
+```
 ### Reset 
 Delete all template files or all files.
 ```
