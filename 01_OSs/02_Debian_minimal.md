@@ -1,7 +1,7 @@
 # Debian: Minimal <a name="top"></a>
 * [Download ISO](#download)
 * [Install Windows Manager](#lxqt)
-* [VIM Customization](#vim)
+* [NEOVIM Customization](#vim)
 * [WINE](#wine)
 * [Check Running Services](#check)
 * [Optimizations](#optim)
@@ -19,9 +19,9 @@ apt install lxqt
 apt install -y lxqt-core      # LXQT
 apt install -y lxde-core      # LXDE
 ```
-## VIM <a name="vim"></a>  ([Up](#top))
+## NEOVIM <a name="vim"></a>  ([Up](#top))
 ```bash
-apt install -y sudo vim
+apt install -y sudo neovim
 vi .vimrc  
 # for user and root (sudo), add:
 colo desert
@@ -38,7 +38,7 @@ ls /etc/rc*.d
 ```
 ## Optimizations <a name="optim"></a>  ([Up](#top))
 ```bash
-apt install -y lxterminal gdebi galculator sudo vim xfburn soundconverter mc p7zip-full qpdfview qbittorrent geany
+apt install -y lxterminal gdebi galculator sudo xfburn soundconverter mc p7zip-full qpdfview qbittorrent geany
 apt autoremove -y termit lxtask nano
 # or
 apt purge lxlock
@@ -52,7 +52,7 @@ LXTerminal is a non-login shell.
 The start-up script is ~/.bashrc, not ~/.bash_profile or ~/.profile.
 
 ## Create desktop entries  ([Up](#top))
-```vim
+```
 vi <shortcut>
 
 [Desktop Entry]
