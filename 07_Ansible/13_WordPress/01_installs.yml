@@ -5,10 +5,10 @@
     become: yes
     apt: update_cache=yes
 
-  - name: prerequisites
+  - name: prerequisites1
     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
 
-  - name: prerequisites
+  - name: prerequisites2
     become: yes
     apt: name={{item}} state=present
     with_items:
