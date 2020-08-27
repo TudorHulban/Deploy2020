@@ -6,6 +6,14 @@
     wp_mysql_password: "admin"
 
   tasks:
+  - name: install mysql
+    become: yes
+    apt:
+      pkg:
+        - mysql-server
+        - mysql-common
+        - python-mysqldb
+
   - name: create mysql auth file
     become: yes
     template:
