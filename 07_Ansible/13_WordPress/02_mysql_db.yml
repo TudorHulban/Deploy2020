@@ -6,14 +6,20 @@
     wp_mysql_password: "admin"
 
   tasks:
-    - name: create mysql db
-      become: yes
-      mysql_db: name={{wp_mysql_db}} state=present
+  - name: create mysql auth file
+    become: yes
+    template:
+     src: my.cnf.j2
+     dest: "~/.my.cnf"
+     mode: 0640
 
-    - name: mysql user
-      become: yes
-      mysql_user:
-        name={{wp_mysql_user}}
-        password={{wp_mysql_password}}
-        priv=*.*:ALL
-   
+  - name: create mysql user
+    mysql_user:
+        name: "{{wp_mysql_user}}"
+        password: "{{wp_mysql_password}}"
+        
+  - name: create mysql db
+    mysql_db:
+        name: "{{wp_mysql_db}}"
+        state: present
+
