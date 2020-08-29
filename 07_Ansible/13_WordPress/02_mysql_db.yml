@@ -10,9 +10,9 @@
   - name: install mysql on Ubuntu 20.04
     apt:
       pkg:
-        - mysql-server
-        - mysql-common
-        - python-mysqldb
+        - mariadb-server
+        - mariadb-client
+
 
   - name: check service status
     command: /usr/sbin/service mysql status

@@ -17,6 +17,7 @@ SELECT DATABASE();
 ```
 #### Resources
 ```html
+https://linuxconfig.org/ubuntu-20-04-wordpress-with-apache-installation
 https://developer.wordpress.org/themes/basics/template-files/
 https://stackoverflow.com/questions/44614863/ansible-unable-to-find-my-cnf-cant-connect-to-local-mysql-server
 https://stackoverflow.com/questions/16444306/ansible-idempotent-mysql-installation-playbook
