@@ -3,13 +3,13 @@
   tasks:
   - name: update packages
     become: yes
-    apt: "update_cache=yes"
+    apt: update_cache=yes
 
-  - name: prerequisites and mysql
+  - name: install mysql on Ubuntu
     become: yes
-    apt: name={{item}} state=latest
-    with_items:
-            - "mysql-server"
+    apt: name={{item}} 
+     pkg:
+      - mysql-server
 
   - name: allow remote connections
     become: yes
