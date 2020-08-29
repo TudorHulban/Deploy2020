@@ -1,4 +1,4 @@
-# WordPress installation on Ubuntu 20.04  ssh-keygen -f "/home/tudi/.ssh/known_hosts" -R "192.168.1.14"
+# WordPress installation on Ubuntu 20.04 
 
 Note: Update wordpress config file by Ansible does not work. Would need to update file manually.
 
