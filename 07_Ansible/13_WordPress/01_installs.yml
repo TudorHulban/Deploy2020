@@ -5,16 +5,16 @@
   - name: update packages 
     apt: update_cache=yes
 
-  - name: prerequisites1
+  - name: Ubuntu install - prerequisites1
     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
 
-  - name: prerequisites2
+  - name: Ubuntu install - prerequisites2 
     apt: 
       pkg:
        - apache2
-       - php7.3-mysql
-       - php7.3
-       - libapache2-mod-php7.3
-       - php7.3-gd
-       - php7.3-ssh2
+       - php7.2-mysql
+       - php7.2
+       - libapache2-mod-php7.2
+       - php7.2-gd
+       - php7.2-ssh2
        - vsftpd
