@@ -10,8 +10,8 @@
   - name: install Maria DB on Ubuntu 20.04
     apt:
       pkg:
-        - mariadb-server
-        - mariadb-client
+        - mysql-server
+        - python-mysqldb
 
   - name: check service status
     command: /usr/sbin/service mysql status
