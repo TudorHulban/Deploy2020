@@ -7,24 +7,23 @@
     wp_mysql_password: "admin"
 
   tasks:
-  - name: install mysql on Ubuntu 20.04
+  - name: install Maria DB on Ubuntu 20.04
     apt:
       pkg:
         - mariadb-server
         - mariadb-client
-
 
   - name: check service status
     command: /usr/sbin/service mysql status
     changed_when: false
 
   - name: create database for wordpress
-    shell: /usr/bin/mysql -u root -e `create database IF NOT EXISTS "{{wp_mysql_db}}" default character set utf8 default collate utf8_bin`
+    shell: /usr/bin/mysql -u root -e `create database IF NOT EXISTS {{wp_mysql_db}} default character set utf8 default collate utf8_bin`
 
   - name: create user develop for wordpress
-    shell: /usr/bin/mysql -u root -e `CREATE USER "{{wp_mysql_user}}" IDENTIFIED BY  "{{wp_mysql_password}}"`
+    shell: /usr/bin/mysql -u root -e `CREATE USER {{wp_mysql_user}} IDENTIFIED BY {{wp_mysql_password}}`
      
   - name: grant rights to user wordpress
-    shell: /usr/bin/mysql -u root -e `GRANT ALL PRIVILEGES ON "{{wp_mysql_db}}".* to "{{wp_mysql_user}}"`
+    shell: /usr/bin/mysql -u root -e `GRANT ALL PRIVILEGES ON {{wp_mysql_db}}.* to {{wp_mysql_user}}`
 
 
