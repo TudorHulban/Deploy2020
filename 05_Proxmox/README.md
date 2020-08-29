@@ -13,6 +13,7 @@ https://192.168.1.6:8006/#v1:0:18:4::::::
 pveam available
 pveam download  local debian-10.0-standard_10.0-1_amd64.tar.gz # download container
 pveam download  local ubuntu-18.04-standard_18.04.1-1_amd64.tar.gz
+pveam download  local ubuntu-20.04-standard_20.04-1_amd64.tar.gz
 pveam download  local centos-8-default_20191016_amd64.tar.xz
 pveam list local  # verify download
 ```
