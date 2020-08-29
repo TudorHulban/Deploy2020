@@ -7,7 +7,7 @@
 
   - name: install mysql on Ubuntu
     become: yes
-    apt: name={{item}} 
+    apt: 
      pkg:
       - mysql-server
 
