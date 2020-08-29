@@ -8,27 +8,23 @@
 
   tasks:
   - name: install mysql on Ubuntu 20.04
-    become: yes
     apt:
       pkg:
         - mysql-server
         - mysql-common
         - python-mysqldb
 
-  - name: create mysql auth file
-    
-    template:
-     src: my.cnf.j2
-     dest: "~/.my.cnf"
-     mode: 0640
+  - name: check service status
+    command: /usr/sbin/service mysql status
+    changed_when: false
 
-  - name: create mysql user
-    mysql_user:
-        name: "{{wp_mysql_user}}"
-        password: "{{wp_mysql_password}}"
-        
-  - name: create mysql db
-    mysql_db:
-        name: "{{wp_mysql_db}}"
-        state: present
+  - name: create database for wordpress
+    shell: /usr/bin/mysql -u root -e `create database IF NOT EXISTS "{{wp_mysql_db}}" default character set utf8 default collate utf8_bin`
+
+  - name: create user develop for wordpress
+    shell: /usr/bin/mysql -u root -e `CREATE USER "{{wp_mysql_user}}" IDENTIFIED BY  "{{wp_mysql_password}}"`
+     
+  - name: grant rights to user wordpress
+    shell: /usr/bin/mysql -u root -e `GRANT ALL PRIVILEGES ON "{{wp_mysql_db}}".* to "{{wp_mysql_user}}"`
+
 

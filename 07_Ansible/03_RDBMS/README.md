@@ -5,6 +5,15 @@
 
 ## MySQL DB
 Target OS: Ubuntu 20.04
+### Connect
+Localhost as root:
+```
+/usr/bin/mysql -u root # -p is any password set
+```
+Show users:
+```
+SELECT User, Host, authentication_string FROM mysql.user;
+```
 
 ## Resources
 ```html
