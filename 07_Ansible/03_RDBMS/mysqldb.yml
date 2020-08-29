@@ -1,22 +1,19 @@
 
 - hosts: mysql
+  become: yes
   tasks:
   - name: update packages
-    become: yes
     apt: update_cache=yes
 
-  - name: install mysql on Ubuntu
-    become: yes
+  - name: install mysql on Ubuntu  
     apt: 
      pkg:
       - mysql-server
 
   - name: allow remote connections
-    become: yes
     lineinfile: dest=/etc/mysql/mysql.conf.d/mysqld.cnf regexp="^bind-address" line="bind-address=0.0.0.0"
 
   - name: load new configuration
-    become: yes
     command: /usr/sbin/service mysql restart   
 
   - name: check service status
@@ -24,13 +21,10 @@
     changed_when: false
 
   - name: create database for development
-    become: yes
     shell: /usr/bin/mysql -u root -e "create database IF NOT EXISTS devops default character set utf8 default collate utf8_bin"
  
   - name: create user develop for development
-    become: yes
     shell: /usr/bin/mysql -u root -e "CREATE USER 'develop'@'192.168.1.%' IDENTIFIED BY 'develop'"
 
   - name: grant rights to user develop
-    become: yes
     shell: /usr/bin/mysql -u root -e "GRANT ALL PRIVILEGES ON devops.* to develop@'192.168.1.%' IDENTIFIED BY 'develop'"
