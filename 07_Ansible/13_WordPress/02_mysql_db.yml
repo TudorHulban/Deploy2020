@@ -1,12 +1,13 @@
 ---
 - hosts: wordpress
+  become: yes
   vars:
     wp_mysql_db: "wordpress"
     wp_mysql_user: "wordpress"
     wp_mysql_password: "admin"
 
   tasks:
-  - name: install mysql
+  - name: install mysql on Ubuntu 20.04
     become: yes
     apt:
       pkg:
@@ -15,7 +16,7 @@
         - python-mysqldb
 
   - name: create mysql auth file
-    become: yes
+    
     template:
      src: my.cnf.j2
      dest: "~/.my.cnf"

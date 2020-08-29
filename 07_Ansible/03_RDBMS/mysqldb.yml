@@ -5,7 +5,7 @@
   - name: update packages
     apt: update_cache=yes
 
-  - name: install mysql on Ubuntu  
+  - name: install mysql on Ubuntu  20.04
     apt: 
      pkg:
       - mysql-server
@@ -24,7 +24,7 @@
     shell: /usr/bin/mysql -u root -e "create database IF NOT EXISTS devops default character set utf8 default collate utf8_bin"
  
   - name: create user develop for development
-    shell: /usr/bin/mysql -u root -e "CREATE USER 'develop'@'192.168.1.%' IDENTIFIED BY 'develop'"
+    shell: /usr/bin/mysql -u root -e "CREATE USER 'develop' IDENTIFIED BY 'develop'"
 
   - name: grant rights to user develop
-    shell: /usr/bin/mysql -u root -e "GRANT ALL PRIVILEGES ON devops.* to develop@'192.168.1.%'"
+    shell: /usr/bin/mysql -u root -e "GRANT ALL PRIVILEGES ON devops.* to develop"

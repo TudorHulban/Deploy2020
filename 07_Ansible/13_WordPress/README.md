@@ -1,3 +1,4 @@
+# WordPress installation on Ubuntu 20.04
 Note: Update wordpress config file by Ansible does not work. Would need to update file manually.
 
 Connect to mysql DB:

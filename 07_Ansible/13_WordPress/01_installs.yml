@@ -1,15 +1,14 @@
 ---
 - hosts: wordpress
+  become: yes
   tasks:
-  - name: update packages
-    become: yes
+  - name: update packages 
     apt: update_cache=yes
 
   - name: prerequisites1
     raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
 
   - name: prerequisites2
-    become: yes
     apt: 
       pkg:
        - apache2
