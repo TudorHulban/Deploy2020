@@ -22,6 +22,7 @@ SELECT DATABASE();
 ```
 #### Resources
 ```html
+https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-wordpress-with-lamp-on-ubuntu-18-04
 https://linuxconfig.org/ubuntu-20-04-wordpress-with-apache-installation
 https://developer.wordpress.org/themes/basics/template-files/
 https://stackoverflow.com/questions/44614863/ansible-unable-to-find-my-cnf-cant-connect-to-local-mysql-server
