@@ -1,88 +1,93 @@
 ---
-- hosts: wordpress
-  become: yes
-  vars:
-    wp_mysql_db: "wordpress"
-    wp_mysql_user: "wordpress"
-    wp_mysql_password: "admin"
-
-  tasks:
-  - name: download Wordpress
-    get_url:
-     url: https://wordpress.org/latest.tar.gz
-     dest: /tmp/wordpress.tar.gz
-     validate_certs: no
-
-  - name: extract Wordpress
-    unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
-
-  - name: update default Apache configuration
-    lineinfile:
-     dest=/etc/apache2/sites-enabled/000-default.conf
-     regexp="(.)+DocumentRoot /var/www/html"
-     line="DocumentRoot /var/www/wordpress"
-
-  - name: update Apache configuration
-    lineinfile:
-     dest=/etc/apache2/apache2.conf
-     line="DocumentRoot /var/www/wordpress"
-
-  - name: create Wordpress config file
-    copy:
-      dest: "/var/www/wordpress/wp-config.php"
-      content: |
-       <?php
-       define('DB_NAME', 'wordpress');
-       define('DB_USER', 'wordpress');
-       define('DB_PASSWORD', 'admin');
-       define( 'DB_HOST', 'localhost' );
-       define( 'DB_CHARSET', 'utf8' );
-       define( 'DB_COLLATE', '' );
-       
-       $table_prefix = 'wp_';
-      
-       if ( ! defined( 'ABSPATH' ) ) {^M
-              define( 'ABSPATH', __DIR__ . '/' );^M
-       }
-      
-  - name: update apache2 php.ini - delete upload_max_filesize
-    lineinfile: dest=/etc/php/7.2/apache2/php.ini
-                state=absent
-                regexp='upload_max_filesize'
-
-  - name: update apache2 php.ini - delete post_max_size 
-    lineinfile: dest=/etc/php/7.2/apache2/php.ini
-                state=absent
-                regexp='post_max_size'
+  - hosts: wordpress
+    vars:
+      wp_mysql_db: "wordpress"
+      wp_mysql_user: "wordpress"
+      wp_mysql_password: "admin"
   
-  - name: update apache2 php.ini - add new configuration values
-    lineinfile: 
-        dest: "/etc/php/7.2/apache2/php.ini"
-        create: yes
-        insertafter: EOF
-        line: "{{item}}" 
-    with_items:
-          - "post_max_size = 32M"
-          - "upload_max_filesize = 32M"
-
-  - name: create folders for theme upload
-    file:
-     path: "/var/www/wordpress/wp-content/{{item}}"
-     state: directory
-     mode: 0777
-    with_items:
-        - "uploads"
-        - "upgrade"
-        - "themes"
-        - "plugins"
-
-  - name: configure ftp server for theme upload
-    lineinfile:
-       dest: "/etc/vsftpd.conf"
-       create: yes
-       insertafter: EOF
-       line: "write_enable=YES"
-
-
-  - name: restart container 
-    shell: init 6
+    tasks:
+    - name: download wordpress
+      get_url:
+       url: https://wordpress.org/latest.tar.gz
+       dest: /tmp/wordpress.tar.gz
+       validate_certs: no
+  
+    - name: extract wordpress
+      become: yes
+      unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
+  
+    - name: update default Apache configuration
+      become: yes
+      lineinfile:
+       dest=/etc/apache2/sites-enabled/000-default.conf
+       regexp="(.)+DocumentRoot /var/www/html"
+       line="DocumentRoot /var/www/wordpress"
+  
+    - name: update Apache configuration
+      become: yes
+      lineinfile:
+       dest=/etc/apache2/apache2.conf
+       line="DocumentRoot /var/www/wordpress"
+  
+    - name: copy wordpress sample config file
+      become: yes
+      command: mv /var/www/wordpress/wp-config-sample.php /var/www/wordpress/wp-config.php 
+  
+    - name: update wordpress config file
+      become: yes
+      lineinfile:
+       dest=/var/www/wordpress/wp-config.php
+       regexp="{{item.regexp}}"
+       line="{{item.line}}"
+      with_items:
+      - {'regexp': "define\\('DB_NAME', '(.)+'\\);", 'line': "define('DB_NAME', '{{wp_mysql_db}}');"}        
+      - {'regexp': "define\\('DB_USER', '(.)+'\\);", 'line': "define('DB_USER', '{{wp_mysql_user}}');"}        
+      - {'regexp': "define\\('DB_PASSWORD', '(.)+'\\);", 'line': "define('DB_PASSWORD', '{{wp_mysql_password}}');"}
+  
+    - name: update apache2 php.ini - delete upload_max_filesize
+      become: yes
+      lineinfile: dest=/etc/php/7.2/apache2/php.ini
+                  state=absent
+                  regexp='upload_max_filesize'
+  
+    - name: update apache2 php.ini - delete post_max_size 
+      become: yes
+      lineinfile: dest=/etc/php/7.2/apache2/php.ini
+                  state=absent
+                  regexp='post_max_size'
+    
+    - name: update apache2 php.ini - add new configuration values
+      become: yes
+      lineinfile: 
+          dest: "/etc/php/7.2/apache2/php.ini"
+          create: yes
+          insertafter: EOF
+          line: "{{item}}" 
+      with_items:
+            - "post_max_size = 32M"
+            - "upload_max_filesize = 32M"
+  
+    - name: create folders for theme upload
+      become: yes
+      file:
+       path: "/var/www/wordpress/wp-content/{{item}}"
+       state: directory
+       mode: 0777
+      with_items:
+          - "uploads"
+          - "upgrade"
+          - "themes"
+          - "plugins"
+  
+    - name: configure ftp server for theme upload
+      become: yes
+      lineinfile:
+         dest: "/etc/vsftpd.conf"
+         create: yes
+         insertafter: EOF
+         line: "write_enable=YES"
+  
+  
+    - name: restart container
+      become: yes 
+      shell: init 6
