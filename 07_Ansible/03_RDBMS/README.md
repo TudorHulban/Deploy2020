@@ -14,6 +14,10 @@ Show users:
 ```
 SELECT User, Host, authentication_string FROM mysql.user;
 ```
+Show databases:
+```
+show databases;
+```
 
 ## Resources
 ```html
