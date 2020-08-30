@@ -1,4 +1,4 @@
 ---
 - import_playbook: 01_installs.yml 
-- import_playbook: 02_mysql_db.yml
+- import_playbook: 02_rdbms.yml
 - import_playbook: 03_wordpress.yml 
