@@ -1,35 +1,31 @@
 
 - hosts: mariadb
+  become: yes
   tasks:
   - name: update packages
-    become: yes
     apt: "update_cache=yes"
 
-  - name: mariadb install
-    become: yes
-    apt: name={{item}} state=latest
-    with_items:
-            - "mariadb-server"
-            - "python-mysqldb"
+  - name: Maria DB install on Ubuntu  20.04
+    apt:
+      pkg:
+       - mariadb-server
+       - mariadb-client
 
   - name: allow remote connections
-    become: yes
     lineinfile: dest=/etc/mysql/mariadb.conf.d/50-server.cnf regexp="^bind-address" line="bind-address=0.0.0.0"
 
   - name: restart mariadb
-    become: yes
     command: /usr/sbin/service mariadb restart   
 
   - name: check service status
     command: /usr/sbin/service mariadb status
     changed_when: false
 
-    #create database devops
   - name: create database for development
-    become: yes
     shell: /usr/bin/mysql -u root -e "create database IF NOT EXISTS devops default character set utf8 default collate utf8_bin"
+
+  - name: create user develop for development
+    shell: /usr/bin/mysql -u root -e "CREATE USER 'develop' IDENTIFIED BY 'develop'"
  
-    #create user develop / develop
-  - name: create user for development
-    become: yes
-    shell: /usr/bin/mysql -u root -e "GRANT ALL PRIVILEGES ON devops.* to develop@'192.168.1.%' IDENTIFIED BY 'develop'"
+  - name: grant rights to user develop
+    shell: /usr/bin/mysql -u root -e "GRANT ALL PRIVILEGES ON devops.* to develop"
