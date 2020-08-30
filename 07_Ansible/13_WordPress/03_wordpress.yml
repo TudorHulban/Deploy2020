@@ -19,9 +19,9 @@
     - name: update default Apache configuration
       become: yes
       lineinfile:
-       dest=/etc/apache2/sites-enabled/000-default.conf
-       regexp="(.)+DocumentRoot /var/www/html"
-       line="DocumentRoot /var/www/wordpress"
+       dest: /etc/apache2/sites-enabled/000-default.conf
+       regexp: "(.)+DocumentRoot /var/www/html"
+       line: "DocumentRoot /var/www/wordpress"
   
     - name: update Apache configuration
       become: yes
@@ -31,7 +31,7 @@
   
     - name: copy wordpress sample config file
       become: yes
-      command: mv /var/www/wordpress/wp-config-sample.php /var/www/wordpress/wp-config.php 
+      command: cp /var/www/wordpress/wp-config-sample.php /var/www/wordpress/wp-config.php 
   
     - name: update wordpress config file
       become: yes

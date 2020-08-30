@@ -5,6 +5,7 @@ Edit with:
 ```
 sudo vi /var/www/wordpress/wp-config.php 
 ```
+Overwrite database info lines in top of file with the ones in bottom.
 
 Connect to mysql DB:
 ```sql
