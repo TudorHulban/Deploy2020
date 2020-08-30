@@ -24,12 +24,12 @@
     changed_when: false
 
   - name: create database for wordpress
-    shell: /usr/bin/mysql -u root -e `create database IF NOT EXISTS wordpress default character set utf8 default collate utf8_bin`
+    shell: /usr/bin/mysql -u root -e "create database IF NOT EXISTS wordpress default character set utf8 default collate utf8_bin"
 
   - name: create user develop for wordpress
-    shell: /usr/bin/mysql -u root -e `CREATE USER wordpress IDENTIFIED BY admin`
+    shell: /usr/bin/mysql -u root -e "CREATE USER wordpress IDENTIFIED BY admin"
      
   - name: grant rights to user wordpress
-    shell: /usr/bin/mysql -u root -e `GRANT ALL PRIVILEGES ON wordpress.* to wordpress`
+    shell: /usr/bin/mysql -u root -e "GRANT ALL PRIVILEGES ON wordpress.* to wordpress"
 
 
