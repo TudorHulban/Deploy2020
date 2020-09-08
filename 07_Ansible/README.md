@@ -19,6 +19,13 @@ sudo apt-get install -y git python python-dev python-pip openssl ansible
 # verify
 ansible --version
 ```
+#### Ubuntu
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+```
 #### 4. Adjust configuration:
 ```bash
 sudo vi /etc/ansible/ansible.cfg 
