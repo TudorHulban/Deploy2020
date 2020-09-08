@@ -1,0 +1,14 @@
+## Set static IP
+### Configure card
+With admin rights in /etc/network/interfaces:
+```
+auto enp0s25
+iface enp0s25 inet static
+  address 192.168.1.7
+  netmask 255.255.255.0
+  broadcast 192.168.0.255
+```
+### Restart network
+```
+ sudo /etc/init.d/networking restart
+```
