@@ -7,7 +7,7 @@ iface enp0s25 inet static
   address 192.168.1.7
   netmask 255.255.255.0
   broadcast 192.168.1.255
-  gateway 192.1168.1.1
+  gateway 192.168.1.1
 ```
 ### Restart network
 ```
