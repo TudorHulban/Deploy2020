@@ -13,3 +13,25 @@ iface enp0s25 inet static
 ```
  sudo /etc/init.d/networking restart
 ```
+
+### dnsmasq
+#### Install
+```
+apt-get update
+apt-get install dnsmasq
+```
+
+Resources:
+```
+https://wiki.debian.org/dnsmasq
+```
+
+#### Run in debug mode first
+```
+dnsmasq --no-daemon --log-queries
+```
+
+#### Test configuration
+```
+dnsmasq --test
+```
