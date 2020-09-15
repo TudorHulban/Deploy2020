@@ -51,6 +51,10 @@ https://askubuntu.com/questions/1258137/cannot-communicate-with-server-post-http
 ```
 snap install lxd
 ```
+## Initialize lxd
+```
+sudo lxd init
+```
 ## Resources
 ```
 https://forum.snapcraft.io/t/installing-snap-on-debian/6742
