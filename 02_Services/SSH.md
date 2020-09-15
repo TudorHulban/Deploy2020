@@ -1,4 +1,4 @@
-## Configure ssh key access
+## Configure SSH key access
 On host to connect for root home folder:
 ```
 cd ~
@@ -27,4 +27,8 @@ scp file-to-send user@targethost:/path/to/place/file
 Works also for transfer to local host. Run on remote host (SSH enabled on local host):
 ```bash
 scp /path/to/file user@targethost:/path/to/place/file
+```
+Resources
+```
+https://www.ssh.com/ssh/sshd_config/
 ```
