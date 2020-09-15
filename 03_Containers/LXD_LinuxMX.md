@@ -66,7 +66,7 @@ https://www.youtube.com/watch?v=1p-fbS_OYTg
 ```
 ## Add container images
 ```
-lxc image list lximages: | grep focal
+lxc image list lximages: | grep focal | grep amd
  ```
 ## Resources
 ```
