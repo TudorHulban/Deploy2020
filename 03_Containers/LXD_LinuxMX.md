@@ -28,6 +28,16 @@ sudo apt install snapd
 ```
 snap install core
 ```
+## Start snap service
+```
+sudo systemctl unmask snapd.service
+systemctl enable snapd.service
+systemctl start snapd.service
+```
+Resources:
+```
+https://askubuntu.com/questions/1258137/cannot-communicate-with-server-post-http-localhost-v2-apps-dial-unix-run-sn
+```
 ## Install lxd
 ```
 snap install lxd
