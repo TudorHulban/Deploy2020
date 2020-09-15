@@ -32,3 +32,7 @@ snap install core
 ```
 snap install lxd
 ```
+## Resources
+```
+https://forum.snapcraft.io/t/installing-snap-on-debian/6742
+```
