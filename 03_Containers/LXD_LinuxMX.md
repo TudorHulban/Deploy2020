@@ -53,7 +53,7 @@ snap install lxd
 ```
 ## Initialize lxd
 ```
-sudo lxd init
+sudo lxd init  # do not add a bridge can do it later
 ```
 ## Resources
 ```
