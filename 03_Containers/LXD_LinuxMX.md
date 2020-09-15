@@ -14,10 +14,19 @@ https://mxlinux.org/wiki/system/systemd/
 sudo systemctl set-default multi-user.target
 sudo systemctl get-default
 ```
+### Disable splash
+```
+sudo vi /etc/default/grub
+# update line to
+GRUB_CMDLINE_LINUX_DEFAULT="quiet"
+# generate new config
+sudo update-grub
+```
 Reboot.<br/>
 Resources:
 ```
 https://www.linuxuprising.com/2020/01/how-to-boot-to-console-text-mode-in.html
+https://askubuntu.com/questions/766973/how-to-uninstall-plymouth
 ```
 
 ## Install snap
