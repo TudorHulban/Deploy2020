@@ -151,7 +151,7 @@ lxc info <container _ name>
 
 ### Resources
 ```
-https://blog.simos.info/how-to-make-your-lxd-container-get-ip-addresses-from-your-lan/
+https://blog.simos.info/how-to-make-your-lxd-container-get-ip-addresses-from-your-lan/ <br/>
 https://blog.simos.info/how-to-use-the-x2go-remote-desktop-with-lxd-containers/
 
 ## Enable SSH key based authentication:
