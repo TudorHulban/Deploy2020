@@ -1,4 +1,4 @@
-# Installation on LXD on Linux MX
+# Installation of LXD on Linux MX
 ## Move to systemd
 ```
 sudo apt install systemd-sysv
@@ -25,3 +25,10 @@ https://www.linuxuprising.com/2020/01/how-to-boot-to-console-text-mode-in.html
 sudo apt install snapd
 ```
 ## Install snap core
+```
+snap install core
+```
+## Install lxd
+```
+snap install lxd
+```
