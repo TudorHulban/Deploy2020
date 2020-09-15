@@ -22,6 +22,14 @@ or instead of user:
 guest ok = yes
 ```
 (maybe chmod 777 folder in case write guest does not work)
+### Add Samba user
+Samba does not use system account therefore a user needs to be created.<br/>
+Username needs to be a system account user.
+```
+id username  # check username, should have a system ID
+sudo smbpasswd -a username
+```
+
 ## Operations
 Check shares:
 ```bash
