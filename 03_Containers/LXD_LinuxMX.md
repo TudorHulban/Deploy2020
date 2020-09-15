@@ -68,6 +68,11 @@ https://www.youtube.com/watch?v=1p-fbS_OYTg
 ```
 lxc image list lximages: | grep focal | grep amd
  ```
+## Create Container
+Use below anytime image can be locally cached:
+```
+lxc launch lximages:ubuntu/focal/amd64 container_name
+```
 ## Resources
 ```
 https://forum.snapcraft.io/t/installing-snap-on-debian/6742
