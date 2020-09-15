@@ -53,7 +53,11 @@ snap install lxd
 ```
 ## Initialize lxd
 ```
-sudo lxd init  # do not add a bridge can do it later
+sudo lxd init  # do not add a bridge, storage pool can do it later
+```
+Resources
+```
+https://www.youtube.com/watch?v=1p-fbS_OYTg
 ```
 ## Resources
 ```
