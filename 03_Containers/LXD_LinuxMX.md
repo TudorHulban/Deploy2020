@@ -64,6 +64,10 @@ Resources
 ```
 https://www.youtube.com/watch?v=1p-fbS_OYTg
 ```
+## Add container images
+```
+lxc image list lximages: | grep focal
+ ```
 ## Resources
 ```
 https://forum.snapcraft.io/t/installing-snap-on-debian/6742
