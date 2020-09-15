@@ -115,19 +115,19 @@ Gather info:
 lxc profile list
 lxc profile show default
 ```
-a. create LAN profile: 
+### Create LAN profile
 ```bash
 lxc profile copy default lanprofile
 ```
-b. get network interface name to use: 
+### Get network interface name to use
 ```bash
 ifconfig
 ```
-c. set nictype as macvlan (in default profile type is bridge): 
+### Set nictype as macvlan
 ```bash
 lxc profile device set lanprofile eth0 nictype macvlan
 ```
-d. set parent as interface connected to LAN: 
+### Set parent as interface connected to LAN
 ```bash
 lxc profile device set lanprofile eth0 parent enp0s25
 ```
@@ -135,11 +135,11 @@ check profile:
 ```bash
 lxc profile show lanprofile
 ```
-e. set timezone:
+### Set timezone
 ```bash
 lxc profile set lanprofile environment.TZ Europe/Bucharest
 ```
-f. create the new container: 
+### Create the new container
 ```bash
 lxc launch -p lanprofile lximages:ubuntu/bionic/amd64 c002
 # or
@@ -148,7 +148,10 @@ lxc launch -p lanprofile <published image> <container _ name>
 Check created container: 
 ```bash
 lxc info <container _ name>
+
+### Resources
 ```
+https://blog.simos.info/how-to-make-your-lxd-container-get-ip-addresses-from-your-lan/
 https://blog.simos.info/how-to-use-the-x2go-remote-desktop-with-lxd-containers/
 
 ## Enable SSH key based authentication:
