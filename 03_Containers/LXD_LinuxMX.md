@@ -52,13 +52,13 @@ https://askubuntu.com/questions/1258137/cannot-communicate-with-server-post-http
 snap install lxd
 ```
 ## Initialize lxd
-Automatically:
+### Automatically:
 ```
 sudo lxd init 
 ```
-Manually:
-### Create network
-### Create storage volume
+### Manually:
+#### Create network
+#### Create storage volume
 
 Resources
 ```
