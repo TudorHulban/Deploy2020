@@ -110,6 +110,7 @@ Ping from one container to another:
 lxc exec <fromContainerName> -- ping -c 4 <toContainerIP>
 ```
 ## Make containers take IP from LAN DHCP 
+Does not work on wireless due to multiple MAC addresses.<br/>
 Gather info:
 ```bash
 lxc profile list
