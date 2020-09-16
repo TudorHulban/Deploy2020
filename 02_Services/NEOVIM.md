@@ -59,10 +59,45 @@ Dark theme:
 let g:airline_theme='codedark'
 ```
 
+## General additions
+### Tree File Explorer
+Adding Ctrl+n shortcut.<br/>
+Toggle panel with `Ctrl+w` or `Ctrl+w+h/l` for navigation.
+
+```bash
+" Nerdtree – Tree File Explorer "
+nmap <C-n> :NERDTreeToggle<CR>
+Plug 'scrooloose/nerdTree'
+```
+#### Resources
+```
+https://github.com/preservim/nerdtree
+https://stackoverflow.com/questions/4446062/two-basic-questions-with-nerdtree-switching-windows-and-finding-files
+```
+
 ## Additions for Golang
 
 
 ## Additions for Javascript
+### Emmet
+Switch completion based on configured key.
+```bash
+" Emmet "
+let g:user_emmet_expandabbr_key = ',,'
+Plug 'mattn/emmet-vim'
+```
+
+#### Test
+Open new file and type:
+```
+html:5
+```
+Exit insert mode and press Ctrl+y+comma.
+
+#### Resources
+```
+https://www.youtube.com/watch?v=ha7oyvhgP04
+```
 
 ## Plugin configuration for Peppermint OS
 ```bash
@@ -70,6 +105,7 @@ let g:airline_theme='codedark'
 let g:VIM_PLUG_PATH =  './autoload/plug.vim'  
 let g:PLUGIN_HOME =  './nvim' 
 ```
+
 ## Sample configuration
 ```bash
   " Shortcuts "
@@ -92,7 +128,7 @@ let g:PLUGIN_HOME =  './nvim'
   Plug 'itchyny/vim-highlighturl'
   Plug 'scrooloose/nerdTree'
   Plug 'dense-analysis/ale'
-  Plug 'mattn/emmet-vim'
+
   
   call plug#end()
   
@@ -104,8 +140,6 @@ let g:PLUGIN_HOME =  './nvim'
   let g:ale_sign_warning = '--'
   let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'], }
   let g:ale_sign_column_always = 1
-  
-  
 ```
 ## Resources
 ```bash
