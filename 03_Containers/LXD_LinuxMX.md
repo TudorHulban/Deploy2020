@@ -73,6 +73,11 @@ Use below anytime image can be locally cached:
 ```
 lxc launch lximages:ubuntu/focal/amd64 container_name
 ```
+Using local image:
+```
+lxc image ls
+lxc launch image_id container_name
+```
 ## Resources
 ```
 https://forum.snapcraft.io/t/installing-snap-on-debian/6742
