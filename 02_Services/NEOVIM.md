@@ -12,58 +12,77 @@ touch ~/.config/nvim/init.vim
 ```
 
 ## Plugin install
-**Git** (sudo apt install git) needed as dependency.
-```vim
+Git needed as dependency (sudo apt install git).
+
+```bash
 cd ~/.config/nvim/autoload
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 Use :PlugInstall and :PlugStatus to install and check on plugins. 
 
 ## Minimal Configuration
+Tested on Debian.
+
 ```bash
 syntax on
-set number
-colo darkblue
+set cursorline
+set number relativenumber
+set colorcolumn=130  
+set title
+set foldlevel=0
+set history=500
 
+" Set plugin configuration "
 let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
 let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')
 
+" Load Plugins "    
 call plug#begin(g:PLUGIN_HOME)
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 ```
+
+## Improved visuals
+Add before plugin end.
+
+Violet theme:
+```bash
+" Airline (powerline) "
+let g:airline_powerline_fonts = 1
+let g:airline_theme='violet'
+```
+
+Dark theme:
+```bash
+" Airline (powerline) "
+let g:airline_theme='codedark'
+```
+
+## Additions for Golang
+
+
+## Additions for Javascript
+
+## Plugin configuration for Peppermint OS
+```bash
+" Set plugin configuration "
+let g:VIM_PLUG_PATH =  './autoload/plug.vim'  
+let g:PLUGIN_HOME =  './nvim' 
+```
 ## Sample configuration
 ```bash
-  syntax on                                                                                                    
-  set number relativenumber
-  set cursorline
-  "set colorcolumn=80
-  
-  set foldlevel=0
-  set history=500
-  set title
-  
-  " Shortcuts 
+  " Shortcuts "
   nmap <C-n> :NERDTreeToggle<CR>
   nmap <C-a> :user_emmet_expandabbr_key<CR>
   
   let g:user_emmet_expandabbr_key = '<C-a>,'
   
-  let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
-  # for peppermint
-  # let g:VIM_PLUG_PATH =  './autoload/plug.vim'  
-  let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')
-  # for peppermint
-  # let g:PLUGIN_HOME =  './nvim'  
-  
   call plug#begin(g:PLUGIN_HOME)
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
   
   Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-  " when running at every change you may want to disable quickfix
+  " when running at every change you may want to disable quickfix "
   let g:prettier#quickfix_enabled = 0
   
   let g:prettier#autoformat = 0
@@ -75,15 +94,10 @@ call plug#end()
   Plug 'dense-analysis/ale'
   Plug 'mattn/emmet-vim'
   
-  Plug 'tomasiser/vim-code-dark'
   call plug#end()
   
-  " Airline (powerline)
-  "let g:airline_powerline_fonts = 1
-  "let g:airline_theme='violet'
-  
-  " ALE Section
-  " Fix files automatically on save
+  " ALE Section "
+  " Fix files automatically on save "
   let g:ale_fix_on_save = 1
   let g:ale_completion_enabled = 1
   let g:ale_sign_error = '>>'
@@ -91,7 +105,7 @@ call plug#end()
   let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'], }
   let g:ale_sign_column_always = 1
   
-  colorscheme codedark
+  
 ```
 ## Resources
 ```bash
