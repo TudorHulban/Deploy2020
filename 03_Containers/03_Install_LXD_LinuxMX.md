@@ -3,7 +3,7 @@
 ```
 sudo apt install systemd-sysv
 ```
-Remove package to revert to sysV.<br/>
+Remove the installed package to revert to sysV.<br/>
 Resources:
 ```
 https://mxlinux.org/wiki/system/systemd/
@@ -12,7 +12,7 @@ https://mxlinux.org/wiki/system/systemd/
 ## Switch to text mode
 ```
 sudo systemctl set-default multi-user.target
-sudo systemctl get-default
+sudo systemctl get-default  # verify mode
 ```
 ### Disable splash
 ```

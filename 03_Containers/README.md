@@ -1,37 +1,7 @@
 # LXD: Installation in Ubuntu and first steps
-## Create ZFS RAID 0 pool
-If ZFS is not installed:
-```bash
-sudo apt-get install zfsutils-linux
-```
-```bash
-sudo zpool list
-sudo zpool create -f -o ashift=12 toshiba /dev/sda /dev/sdb  # raid 0
-sudo zpool create -f d7200 /dev/sdb  # one disk
-```
-## Initialize LXD daemon
-```bash
-sudo lxd init
-```
-- Do you want to configure a new storage pool? yes
-- Name of the new storage pool  lxdpool01
-- Create a new ZFS pool? no
-- Name of the existing ZFS pool or dataset toshiba
-```bash
-sudo zfs list
-```
-## Add images repo
-```bash
-lxc remote add lximages images.linuxcontainers.org
-```
-List available images:
-```bash
-lxc image list lximages: | grep bionic | grep amd64
-```
-## Create container (image cached locally)
-```bash
-lxc launch lximages:ubuntu/bionic/amd64 c001
-```
+
+
+
 Add user to connect remotely: 
 ```bash
 lxc exec c001 adduser ansible
@@ -109,51 +79,6 @@ Ping from one container to another:
 ```bash
 lxc exec <fromContainerName> -- ping -c 4 <toContainerIP>
 ```
-## Make containers take IP from LAN DHCP 
-Does not work on wireless due to multiple MAC addresses.<br/>
-Gather info:
-```bash
-lxc profile list
-lxc profile show default
-```
-### Create LAN profile
-```bash
-lxc profile copy default lanprofile
-```
-### Get network interface name to use
-```bash
-ifconfig
-```
-### Set nictype as macvlan
-```bash
-lxc profile device set lanprofile eth0 nictype macvlan
-```
-### Set parent as interface connected to LAN
-```bash
-lxc profile device set lanprofile eth0 parent enp0s25
-```
-check profile: 
-```bash
-lxc profile show lanprofile
-```
-### Set timezone
-```bash
-lxc profile set lanprofile environment.TZ Europe/Bucharest
-```
-### Create the new container
-```bash
-lxc launch -p lanprofile lximages:ubuntu/bionic/amd64 c002
-# or
-lxc launch -p lanprofile <published image> <container _ name>
-```
-Check created container: 
-```bash
-lxc info <container _ name>
-
-### Resources
-```
-https://blog.simos.info/how-to-make-your-lxd-container-get-ip-addresses-from-your-lan/ <br/>
-https://blog.simos.info/how-to-use-the-x2go-remote-desktop-with-lxd-containers/
 
 ## Enable SSH key based authentication:
 ```bash
