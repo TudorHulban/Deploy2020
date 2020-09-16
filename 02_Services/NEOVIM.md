@@ -1,18 +1,24 @@
 # Neovim: Configuration
-## User settings
+
+## Check health
 ```bash
 :checkhealth
-# file name : init.vim
-# file path ~/.config/nvim/init.vim
 ```
+
+## Create user settings folders and files
+```bash
+mkdir -p ~/.config/nvim/autoload
+touch ~/.config/nvim/init.vim
+```
+
 ## Plugin install
 **Git** (sudo apt install git) needed as dependency.
 ```vim
-mkdir -p ~/.config/nvim/autoload
 cd ~/.config/nvim/autoload
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# in nvim, :PlugInstall and :PlugStatus to install and check on plugins. 
 ```
+Use :PlugInstall and :PlugStatus to install and check on plugins. 
+
 ## Minimal Configuration
 ```bash
 syntax on
@@ -87,7 +93,7 @@ call plug#end()
   
   colorscheme codedark
 ```
-#### Resources
+## Resources
 ```bash
 https://devtechnica.com/vim-neovim/best-neovim-plugins-for-software-development-in-2019
 https://www.gregjs.com/vim/2016/neovim-deoplete-jspc-ultisnips-and-tern-a-config-for-kickass-autocompletion/
