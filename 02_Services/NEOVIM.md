@@ -75,6 +75,12 @@ https://github.com/preservim/nerdtree
 https://stackoverflow.com/questions/4446062/two-basic-questions-with-nerdtree-switching-windows-and-finding-files
 ```
 
+### URL Highlighter
+```bash
+" URL Highlighter "
+Plug 'itchyny/vim-highlighturl'
+```
+
 ## Additions for Golang
 
 
@@ -99,6 +105,21 @@ Exit insert mode and press Ctrl+y+comma.
 https://www.youtube.com/watch?v=ha7oyvhgP04
 ```
 
+### Prettier
+Dependency: npm.
+
+```bash
+" Prettier "
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+
+```
+
+#### Resources
+```html
+https://github.com/prettier/vim-prettier
+```
+
+
 ## Plugin configuration for Peppermint OS
 ```bash
 " Set plugin configuration "
@@ -109,15 +130,9 @@ let g:PLUGIN_HOME =  './nvim'
 ## Sample configuration
 ```bash
   " Shortcuts "
-  nmap <C-n> :NERDTreeToggle<CR>
-  nmap <C-a> :user_emmet_expandabbr_key<CR>
-  
-  let g:user_emmet_expandabbr_key = '<C-a>,'
-  
   call plug#begin(g:PLUGIN_HOME)
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   
-  Plug 'prettier/vim-prettier', { 'do': 'npm install' }
   " when running at every change you may want to disable quickfix "
   let g:prettier#quickfix_enabled = 0
   
@@ -125,11 +140,10 @@ let g:PLUGIN_HOME =  './nvim'
   autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
   
   Plug 'sheerun/vim-polyglot'
-  Plug 'itchyny/vim-highlighturl'
-  Plug 'scrooloose/nerdTree'
+  
+
   Plug 'dense-analysis/ale'
 
-  
   call plug#end()
   
   " ALE Section "
