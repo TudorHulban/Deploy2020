@@ -218,7 +218,7 @@ https://git-scm.com/book/en/v2/Git-Tools-Credential-Storage
 ```html
 http://pad.haroopress.com/
 ```
-### Brackets Editor
+### Brackets Editor (Obsolete)
 http://brackets.io/
 
 Brackets
