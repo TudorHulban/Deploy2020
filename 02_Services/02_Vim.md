@@ -1,5 +1,5 @@
 # VIM First Steps
-See more detailed information in [Neovim](01_Neovim.md) setup.
+See more detailed information in [Neovim](NEOVIM.md) setup.
 
 ## Settings for user
 Configure settings in settings file:

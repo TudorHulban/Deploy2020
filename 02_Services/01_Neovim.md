@@ -106,13 +106,24 @@ https://www.youtube.com/watch?v=ha7oyvhgP04
 ```
 
 ### Prettier
-Dependency: npm.
-
+Dependency: npm.<br/>
+Simple install:
 ```bash
 " Prettier "
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
-
 ```
+
+With selection of file types:
+```bash
+" Prettier "
+let g:prettier#config#parser = 'babylon'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+```
+
+#### Test
+
 
 #### Resources
 ```html
