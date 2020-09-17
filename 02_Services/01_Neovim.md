@@ -1,4 +1,20 @@
-# Neovim: Configuration
+# Neovim: Installation and Configuration
+## Installation
+```
+sudo apt-get install neovim
+```
+Get binary version with `nvim --version`.
+
+### Python support
+```
+sudo apt-get install python-neovim
+sudo apt-get install python3-neovim
+```
+
+### Resources
+```
+https://github.com/neovim/neovim/wiki/Installing-Neovim
+```
 
 ## Check health
 ```bash
@@ -44,7 +60,11 @@ call plug#end()
 ```
 
 ## Improved visuals
-Add before plugin end.
+### Standard color schemes
+Standard color schemes coming with Neovim reside in `/usr/share/nvim/runtime/colors`.
+
+### Additional Schemes
+Add before plugin end Airline color schemes. Themes in `..../vim-airline-themes/autoload/airline/themes`.
 
 Violet theme:
 ```bash
@@ -78,11 +98,21 @@ https://medium.com/better-programming/setting-up-neovim-for-web-development-in-2
 ```
 
 ### Icons for File Explorer
-Dependency: Nerd Font
+Dependency: Nerd Font<br/>
+
 ```
 " Icons – Tree File Explorer "
 Plug 'ryanoasis/vim-devicons'
 ```
+
+#### Nerd Font installation
+Download `Hack` font from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack.<br/>
+Place downloads in `./local/share/fonts`, example of files to download:
+- Hack Regular Nerd Font Complete.ttf
+- Hack Italic Nerd Font Complete.ttf
+- Hack Bold Italic Nerd Font Complete.ttf
+- Hack Bold Nerd Font Complete.ttf
+
 
 ### URL Highlighter
 ```bash
@@ -149,19 +179,9 @@ let g:PLUGIN_HOME =  './nvim'
 
 ## Sample configuration
 ```bash
-  " Shortcuts "
   call plug#begin(g:PLUGIN_HOME)
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  
-  " when running at every change you may want to disable quickfix "
-  let g:prettier#quickfix_enabled = 0
-  
-  let g:prettier#autoformat = 0
-  autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-  
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } 
   Plug 'sheerun/vim-polyglot'
-  
-
   Plug 'dense-analysis/ale'
 
   call plug#end()
