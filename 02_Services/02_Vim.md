@@ -46,4 +46,18 @@ call plug#end()
 ```
 
 ### Tabs
+Open second file with `:tabedit file`.<br/>
+Navigate between files:<br/>
+- back and forth: `gt` and `gT`
+- specific tab: `2gt` for second tab
+- first and last: `:tabfirst` or `:tablast`
+
+Close tab: `:tabclose`, close all other tabs: `:tabonly`.
+
+#### Resources
+```
+https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85/
+```
+
+
 

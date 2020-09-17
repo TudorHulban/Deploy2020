@@ -61,18 +61,27 @@ let g:airline_theme='codedark'
 
 ## General additions
 ### Tree File Explorer
-Adding Ctrl+n shortcut.<br/>
+Adding Ctrl+e shortcut.<br/>
 Toggle panel with `Ctrl+w` or `Ctrl+w+h/l` for navigation.
 
 ```bash
 " Nerdtree – Tree File Explorer "
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-e> :NERDTreeToggle<CR>
+let g:NERDTreeShowHidden = 1
 Plug 'scrooloose/nerdTree'
 ```
 #### Resources
 ```
 https://github.com/preservim/nerdtree
 https://stackoverflow.com/questions/4446062/two-basic-questions-with-nerdtree-switching-windows-and-finding-files
+https://medium.com/better-programming/setting-up-neovim-for-web-development-in-2020-d800de3efacd
+```
+
+### Icons for File Explorer
+Dependency: Nerd Font
+```
+" Icons – Tree File Explorer "
+Plug 'ryanoasis/vim-devicons'
 ```
 
 ### URL Highlighter
