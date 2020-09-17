@@ -54,6 +54,19 @@ Navigate between files:<br/>
 
 Close tab: `:tabclose`, close all other tabs: `:tabonly`.
 
+### Search
+```
+https://www.cyberciti.biz/faq/find-a-word-in-vim-or-vi-text-editor/#Find_a_word_in_Vim
+```
+
+### Undo
+Use `u` or `:u`.
+
+#### Resources
+```
+https://www.cyberciti.biz/faq/vim-undo/
+```
+
 #### Resources
 ```
 https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85/

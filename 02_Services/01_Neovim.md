@@ -61,7 +61,8 @@ call plug#end()
 
 ## Improved visuals
 ### Standard color schemes
-Standard color schemes coming with Neovim reside in `/usr/share/nvim/runtime/colors`.
+Standard color schemes coming with Neovim reside in `/usr/share/nvim/runtime/colors`.<br/>
+Can use `bblue` dark theme in folder.
 
 ### Additional Schemes
 Add before plugin end Airline color schemes. Themes in `..../vim-airline-themes/autoload/airline/themes`.
