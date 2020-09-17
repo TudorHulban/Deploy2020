@@ -41,22 +41,35 @@ Use :PlugInstall and :PlugStatus to install and check on plugins.
 Tested on Debian.
 
 ```bash
+" Basic Settings "
 syntax on
 set cursorline
 set number relativenumber
-set colorcolumn=130  
+set colorcolumn=130
 set title
 set foldlevel=0
-set history=500
+colo blue
 
 " Set plugin configuration "
 let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
 let g:PLUGIN_HOME = expand(stdpath('config') . '/plugins')
 
-" Load Plugins "    
+" Load Plugins "
 call plug#begin(g:PLUGIN_HOME)
 Plug 'vim-airline/vim-airline'
+
+" Set Airline theme "
 Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='codedark'
+
+" Nerdtree – Tree File Explorer "
+nmap <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeShowHidden = 1
+Plug 'scrooloose/nerdTree'
+
+" Development "
+Plug 'itchyny/vim-highlighturl'
+
 call plug#end()
 ```
 
