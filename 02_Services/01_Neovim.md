@@ -28,7 +28,8 @@ touch ~/.config/nvim/init.vim
 ```
 
 ## Plugin install
-Git needed as dependency (sudo apt install git).
+Git needed as dependency (sudo apt install git).<br/>
+If any issues with plugin install consider deleting plugin folder and reinstall.
 
 ```bash
 cd ~/.config/nvim/autoload
@@ -50,7 +51,7 @@ set history=500
 
 " Set plugin configuration "
 let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
-let g:PLUGIN_HOME = expand(stdpath('config') . '/nvim')
+let g:PLUGIN_HOME = expand(stdpath('config') . '/plugins')
 
 " Load Plugins "    
 call plug#begin(g:PLUGIN_HOME)
@@ -178,7 +179,7 @@ let g:VIM_PLUG_PATH =  './autoload/plug.vim'
 let g:PLUGIN_HOME =  './nvim' 
 ```
 
-## Sample configuration
+## Configuration under review
 ```bash
   call plug#begin(g:PLUGIN_HOME)
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } 
@@ -198,6 +199,7 @@ let g:PLUGIN_HOME =  './nvim'
 ```
 ## Resources
 ```bash
+https://vimawesome.com/
 https://devtechnica.com/vim-neovim/best-neovim-plugins-for-software-development-in-2019
 https://www.gregjs.com/vim/2016/neovim-deoplete-jspc-ultisnips-and-tern-a-config-for-kickass-autocompletion/
 http://learnvimscriptthehardway.stevelosh.com/
