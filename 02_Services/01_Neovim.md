@@ -48,7 +48,7 @@ set number relativenumber
 set colorcolumn=130
 set title
 set foldlevel=0
-colo blue
+colo industry
 
 " Set plugin configuration "
 let g:VIM_PLUG_PATH = expand(stdpath('config') . '/autoload/plug.vim')
