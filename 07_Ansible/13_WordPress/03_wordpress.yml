@@ -35,15 +35,10 @@
   
     - name: update wordpress config file
       become: yes
-      lineinfile:
-       dest=/var/www/wordpress/wp-config.php
-       regexp="{{item.regexp}}"
-       line="{{item.line}}"
-      with_items:
-      - {'regexp': "define\\('DB_NAME', '(.)+'\\);", 'line': "define('DB_NAME', '{{wp_mysql_db}}');"}        
-      - {'regexp': "define\\('DB_USER', '(.)+'\\);", 'line': "define('DB_USER', '{{wp_mysql_user}}');"}        
-      - {'regexp': "define\\('DB_PASSWORD', '(.)+'\\);", 'line': "define('DB_PASSWORD', '{{wp_mysql_password}}');"}
-  
+      template:
+        src: "04_wordpress_php_config.j2"
+        dest: "/var/www/wordpress/wp-config.php"
+
     - name: update apache2 php.ini - delete upload_max_filesize
       become: yes
       lineinfile: dest=/etc/php/7.2/apache2/php.ini
