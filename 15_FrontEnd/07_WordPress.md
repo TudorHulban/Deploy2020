@@ -17,4 +17,8 @@ Template Name: Template Page
 <?php get_header(); ?>
 
 <?php get_footer(); ?>
+
+## Resources
+```
+https://www.tutorialspoint.com/wordpress/index.htm
 ```
