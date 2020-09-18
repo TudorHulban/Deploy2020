@@ -54,7 +54,7 @@ Verify that nothing is requested on login request:
 ssh ansible@<host IP>
 ```
 #### 7. Start actions
-Create YAML file with actions.
+Create YAML file with actions. Run as `ansible` user:
 ```bash
 ansible-playbook file.yml
 ```
