@@ -11,6 +11,7 @@ alias sec='gosec -no-fail ./... 2>&1 | tee ~/ram/sast-gosec.log'
 
 alias depl='git clone git@github.com:TudorHulban/Deploy2020.git'
 ```
+# For root aliases should go in `~/.bashrc`.
 
 ## CentOS
 Aliases should go in `~/.bashrc`.
