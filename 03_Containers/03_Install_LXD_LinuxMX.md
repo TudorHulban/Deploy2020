@@ -59,6 +59,9 @@ sudo lxd init
 ### Manually:
 #### Create network
 #### Create storage volume
+```sh
+lxc storage create pool_name dir source=/ram/lxd
+```
 
 Resources
 ```
