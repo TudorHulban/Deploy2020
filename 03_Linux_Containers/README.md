@@ -76,3 +76,32 @@ Add user to sudoers list:
 ```bash
 sudo adduser <username> sudo
 ```
+
+## Troubleshooting
+### Listening ports
+Have `net-tools` package installed:
+```sh
+sudo apt install net-tools
+```
+
+Verify listening ports:
+```
+netstat -tunlp
+```
+
+### Connecting to containers
+Topology:<br/>
+Local workstation: 192.168.1.5 <br/>
+Remote server hosting containers: 192.168.1.7 <br/>
+Container running web server on port 80: 10.208.176.115 <br/>
+
+To connect issue below SSH port forwarding that will remain as long as SSH session opened:<br/>
+```sh
+ssh -L 8888:10.208.176.115:80 192.168.1.7
+```
+Maps remote port to local 8888.
+
+#### Resources
+```
+https://linuxize.com/post/check-listening-ports-linux/
+```
