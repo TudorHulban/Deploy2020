@@ -32,6 +32,10 @@ set number
 sudo dpkg --add-architecture i386 && sudo apt update
 sudo apt install wine wine32 wine64 libwine libwine:i386 fonts-wine
 ```
+### Check version
+```
+wine --version
+```
 ## Check services per run level <a name="check"></a>  ([Up](#top))
 ```bash
 ls /etc/rc*.d
