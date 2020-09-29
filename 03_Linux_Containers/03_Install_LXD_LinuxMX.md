@@ -49,7 +49,7 @@ https://askubuntu.com/questions/1258137/cannot-communicate-with-server-post-http
 ```
 ## Install lxd
 ```
-snap install lxd
+sudo snap install lxd
 ```
 ## Initialize lxd
 ### Automatically:
