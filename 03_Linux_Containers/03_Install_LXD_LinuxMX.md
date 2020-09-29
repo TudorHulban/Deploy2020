@@ -40,8 +40,8 @@ snap install core
 ## Start snap service
 ```
 sudo systemctl unmask snapd.service
-systemctl enable snapd.service
-systemctl start snapd.service
+sudo systemctl enable snapd.service
+sudo systemctl start snapd.service
 ```
 Resources:
 ```
