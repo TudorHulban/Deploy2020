@@ -63,6 +63,10 @@ sudo lxd init
 ```sh
 lxc storage create pool_name dir source=/ram/lxd
 ```
+##### Check storage creation
+```
+lxc storage ls
+```
 
 Resources
 ```
