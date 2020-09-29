@@ -107,4 +107,5 @@ https://dev.to/javinpaul/10-simple-linux-tips-which-save-50-of-my-time-in-the-co
 ## Resources
 ```
 https://askubuntu.com/questions/62858/turn-off-monitor-using-command-line
+https://unix.stackexchange.com/questions/399739/disable-laptop-screen-and-use-only-vga
 ```
