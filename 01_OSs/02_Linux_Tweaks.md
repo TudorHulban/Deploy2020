@@ -103,3 +103,8 @@ systemctl --type=service --state=active list-units
 ```html
 https://dev.to/javinpaul/10-simple-linux-tips-which-save-50-of-my-time-in-the-command-line-4moo?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
 ```
+
+## Resources
+```
+https://askubuntu.com/questions/62858/turn-off-monitor-using-command-line
+```
