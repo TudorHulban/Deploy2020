@@ -48,8 +48,9 @@ Resources:
 https://askubuntu.com/questions/1258137/cannot-communicate-with-server-post-http-localhost-v2-apps-dial-unix-run-sn
 ```
 ## Install lxd
+As root:
 ```
-sudo snap install lxd
+snap install lxd
 ```
 ## Initialize lxd
 ### Automatically:
