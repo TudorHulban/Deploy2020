@@ -1,3 +1,9 @@
+### Add Romanian 
+#### Generate locales
+#### Add keyboard switch indicator to panel
+#### Add Romanian with win keys
+Switch as needed.
+
 ### Set run level to text
 ```
 sudo vi /etc/inittab
