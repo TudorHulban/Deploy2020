@@ -84,7 +84,11 @@ If mount folder does not exist it will be created. Save. reboot and verify with
 ```bash
 df -h  # or
 sudo fdisk /dev/sdx  # and p
-# https://www.digitalocean.com/community/tutorials/how-to-partition-and-format-storage-devices-in-linux
+sudo hdparm -I /dev/sdx
+```
+### Resources
+```
+https://www.digitalocean.com/community/tutorials/how-to-partition-and-format-storage-devices-in-linux
 ```
 ## Prevent laptop going to sleep when docked <a name="dock"></a> ([Up](#top))
 ```bash
