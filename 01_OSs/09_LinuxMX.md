@@ -4,6 +4,11 @@
 #### Add Romanian with win keys
 Switch as needed.
 
+### Switch system language to US
+```
+sudo update-locale LANG=en_US.UTF-8 UTF-8
+```
+
 ### Set run level to text
 ```
 sudo vi /etc/inittab
