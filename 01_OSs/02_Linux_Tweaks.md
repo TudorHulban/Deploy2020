@@ -6,7 +6,6 @@
 * [LOC](#loc)
 * [MOTD](#motd)
 * [New hard drive](#new)
-* [Partitioning](#format)
 * [Mount Disk](#mount)
 * [No sleep when docked](#dock)
 * [Running Services](#services)
@@ -55,21 +54,15 @@ sudo mkdir _scripts
 sudo mv needed scripts to _scripts
 ```
 ## Add New hard drive to OS <a name="new"></a> ([Up](#top))
+### Partitioning
+#### Create Partition
 ```bash
-sudo parted # partition drive
-lsblk       # identify drive
-sudo parted /dev/sdx mklabel gpt  # create partition table on drive
-sudo parted -a opt /dev/sdx mkpart primary ext4 0% 100%  # create partition
-lsblk       # check partition
-```
-## Partitioning <a name="format"></a> ([Up](#top))
-### Create Partition
-```bash
+lsblk   # to identify drive
 fdisk /dev/sdc
 # create new gpt label
 # create new partition <n>
 ```
-### Format Partition
+#### Format Partition
 ```bash
 sudo mkfs.ext4 -L datapartitionlabel /dev/sdX1
 ```
