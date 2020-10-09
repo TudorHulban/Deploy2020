@@ -19,6 +19,12 @@ sudo apt-get install -y git python python-dev python-pip openssl ansible
 # verify
 ansible --version
 ```
+### Connect with SSH key
+```
+mkdir ~/.ssh
+touch ~/.ssh/authorized_keys
+```
+Edit authorized keys file and add the SSH key of the user trying to connect.
 #### Ubuntu
 ```
 sudo apt update
