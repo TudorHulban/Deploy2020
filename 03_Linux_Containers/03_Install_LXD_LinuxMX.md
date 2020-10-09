@@ -74,6 +74,9 @@ https://www.youtube.com/watch?v=1p-fbS_OYTg
 ```
 ## Add container images
 ```
+# add repo first
+lxc remote add lximages images.linuxcontainers.org
+
 lxc image list lximages: | grep focal | grep amd
  ```
 ## Create Container
