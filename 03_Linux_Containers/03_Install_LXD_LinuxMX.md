@@ -67,7 +67,14 @@ lxc storage create pool_name dir source=/ram/lxd
 ```
 lxc storage ls
 ```
-
+##### Add storage to default profile
+```
+lxc profile device add default root disk path=/ pool=pool_name
+```
+Verify now the profile. The added pool should be added as root system in '/'.
+```
+lxc profile show default 
+```
 Resources
 ```
 https://www.youtube.com/watch?v=1p-fbS_OYTg
