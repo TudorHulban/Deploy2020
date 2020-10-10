@@ -1,4 +1,5 @@
 ## Debian
+See commands with `alias`.
 ```sh
 alias ra='cd ~/ram'
 
