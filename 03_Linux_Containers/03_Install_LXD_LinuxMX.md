@@ -59,6 +59,7 @@ sudo lxd init
 ```
 ### Manually:
 #### Create network
+
 #### Create storage volume
 ##### Create storage from separate disk
 Wipe clean disk:
@@ -88,6 +89,13 @@ Resources
 ```
 https://www.youtube.com/watch?v=1p-fbS_OYTg
 ```
+
+##### Update storage to default profile
+```
+lxc profile edit default # delete manually the root disk entries
+lxc profile device add default root disk path=/ pool=pool_name  # adds new pool to the default profile
+```
+
 ## Add container images
 ```
 # add repo first
