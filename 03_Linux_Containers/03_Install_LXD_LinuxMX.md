@@ -60,6 +60,15 @@ sudo lxd init
 ### Manually:
 #### Create network
 #### Create storage volume
+##### Create storage from separate disk
+Wipe clean disk:
+```
+gdisk /dev/sdx
+# use x to go in expert mode and wipe GPT and MBR
+# create storage
+lxc storage create  pool_name btrfs  source=/dev/sdx
+```
+##### Create storage from RAM disk
 ```sh
 lxc storage create pool_name dir source=/ram/lxd
 ```
