@@ -4,3 +4,8 @@
   tasks:
   - name: install apache2
     apt: name=apache2 update_cache=yes state=latest
+
+  - name: enable ssl module
+    apache2_module: 
+        name: ssl
+        state: present
