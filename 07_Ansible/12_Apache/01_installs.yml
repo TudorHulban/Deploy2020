@@ -9,3 +9,8 @@
     apache2_module: 
         name: ssl
         state: present
+
+  - name: Set up Apache virtuahHost
+    template:
+        src: "files/apache.conf.j2"
+        dest: "/etc/apache2/sites-available/apache.conf"
