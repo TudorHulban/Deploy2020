@@ -29,7 +29,7 @@
       state: present
 
   - name: generate self signed certificate
-      shell: |
+    shell: |
         cd /etc/apache2 
         openssl genrsa -out {{theDomain}}.key 1024
-        openssl req -new x509 -days 90 -key {{theDomain}}.key -out {{theDomain}}.crt -subj "/C=RO/L=Iasi/O={{theDomain}}/CN=www.{{theDomain}}.eu"
+        openssl req -new -x509 -days 90 -key {{theDomain}}.key -out {{theDomain}}.crt -subj "/C=RO/L=Iasi/O={{theDomain}}/CN=www.{{theDomain}}.eu"
