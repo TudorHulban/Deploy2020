@@ -25,5 +25,7 @@
 
 
   - name: generate rsa and csr
-    command: cd /etc/apache2 && openssl genrsa -out {{theDomain}}.key 1024
+    shell: |
+      cd /etc/apache2 
+      openssl genrsa -out {{theDomain}}.key 1024
     
