@@ -1,6 +1,9 @@
 ---
 - hosts: wordpress
   become: yes
+  vars:
+    theDomain: "testing"
+
   tasks:
   - name: update packages 
     apt: update_cache=yes
@@ -20,7 +23,13 @@
        - vsftpd
        - openssl
 
-  - name: enable ssl module
+  - name: enable Apache ssl module
     apache2_module: 
       name: ssl
       state: present
+
+  - name: generate self signed certificate
+      shell: |
+        cd /etc/apache2 
+        openssl genrsa -out {{theDomain}}.key 1024
+        openssl req -new x509 -days 90 -key {{theDomain}}.key -out {{theDomain}}.crt -subj "/C=RO/L=Iasi/O={{theDomain}}/CN=www.{{theDomain}}.eu"
