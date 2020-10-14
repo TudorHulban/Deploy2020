@@ -1,7 +1,15 @@
 ---
 - hosts: apache
   become: yes
+  vars:
+    theDomain: "testing.eu"
+
   tasks:
+  - name: Ubuntu install - prerequisites
+    apt: 
+      pkg:
+       - openssl
+
   - name: install apache2
     apt: name=apache2 update_cache=yes state=latest
 
@@ -14,3 +22,8 @@
     template:
         src: "apache.conf.j2"
         dest: "/etc/apache2/sites-available/apache.conf"
+
+
+  - name: generate rsa and csr
+    command: cd /etc/apache2 && openssl genrsa -out {{theDomain}}.key 1024
+    
