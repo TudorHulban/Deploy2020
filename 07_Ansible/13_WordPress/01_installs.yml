@@ -18,3 +18,9 @@
        - php-xml
        - php-curl
        - vsftpd
+       - openssl
+
+  - name: enable ssl module
+    apache2_module: 
+      name: ssl
+      state: present

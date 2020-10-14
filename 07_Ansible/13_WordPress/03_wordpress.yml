@@ -85,4 +85,4 @@
   
     - name: restart container
       become: yes 
-      shell: init 6
+      shell: reboot
