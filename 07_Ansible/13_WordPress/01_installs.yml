@@ -31,5 +31,4 @@
   - name: generate self signed certificate
     shell: |
         cd /etc/apache2 
-        openssl genrsa -out {{theDomain}}.key 1024
-        openssl req -new -x509 -days 90 -key {{theDomain}}.key -out {{theDomain}}.crt -subj "/C=RO/L=Iasi/O={{theDomain}}/CN=www.{{theDomain}}.eu"
+        openssl req -nodes -newkey rsa:2048 -keyout thesite.key -out thesite.crt -x509 -days 365 -subj "/C=RO/L=Iasi/O={{theDomain}}/CN=www.{{theDomain}}.eu"
