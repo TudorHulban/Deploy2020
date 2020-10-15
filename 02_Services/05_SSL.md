@@ -1,7 +1,7 @@
 
 ### Verify certificate for site
 ```
-openssl s_client -host 127.0.0.1 -port 443
+openssl s_client -host localhost -port 443
 openssl s_client -host www.site2check.eu -port 443
 ```
 
