@@ -83,6 +83,3 @@
          line: "write_enable=YES"
   
   
-    - name: restart container
-      become: yes 
-      shell: reboot
