@@ -1,4 +1,13 @@
 # WordPress installation on Ubuntu 20.04 
+## Prerequisites
+
+### OpenSSL
+OpenSSL for Ansible:
+```
+sudo pip install pyOpenSSL
+```
+
+### Configuration
 If needed to update wordpress config file edit with:
 ```
 sudo vi /var/www/wordpress/wp-config.php 
