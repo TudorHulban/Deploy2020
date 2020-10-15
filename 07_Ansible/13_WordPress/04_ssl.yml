@@ -7,14 +7,14 @@
 
   - name: update apache config file
     template:
-    src: "06_apache_default.config.j2"
-    dest: "/etc/apache2/sites-available/000-default.conf"
+     src: "06_apache_default.config.j2"
+     dest: "/etc/apache2/sites-available/000-default.conf"
 
 
   - name: update apache ports file
     template:
-    src: "07_apache_ports.config.j2"
-    dest: "/etc/apache2/ports.conf"
+     src: "07_apache_ports.config.j2"
+     dest: "/etc/apache2/ports.conf"
 
   - name: restart container
     shell: reboot
