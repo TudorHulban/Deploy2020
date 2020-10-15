@@ -1,5 +1,6 @@
 ---
   - hosts: wordpress
+    become: yes
     vars:
       wp_mysql_db: "wordpress"
       wp_mysql_user: "wordpress"
@@ -13,46 +14,38 @@
        validate_certs: no
   
     - name: extract wordpress
-      become: yes
       unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
   
     - name: update default Apache configuration
-      become: yes
       lineinfile:
        dest: /etc/apache2/sites-enabled/000-default.conf
        regexp: "(.)+DocumentRoot /var/www/html"
        line: "DocumentRoot /var/www/wordpress"
   
     - name: update Apache configuration
-      become: yes
       lineinfile:
        dest=/etc/apache2/apache2.conf
        line="DocumentRoot /var/www/wordpress"
   
     - name: copy wordpress sample config file
-      become: yes
       command: cp /var/www/wordpress/wp-config-sample.php /var/www/wordpress/wp-config.php 
   
     - name: update wordpress config file
-      become: yes
       template:
         src: "05_wordpress_php_config.j2"
         dest: "/var/www/wordpress/wp-config.php"
 
     - name: update apache2 php.ini - delete upload_max_filesize
-      become: yes
       lineinfile: dest=/etc/php/7.2/apache2/php.ini
                   state=absent
                   regexp='upload_max_filesize'
   
     - name: update apache2 php.ini - delete post_max_size 
-      become: yes
       lineinfile: dest=/etc/php/7.2/apache2/php.ini
                   state=absent
                   regexp='post_max_size'
     
     - name: update apache2 php.ini - add new configuration values
-      become: yes
       lineinfile: 
           dest: "/etc/php/7.2/apache2/php.ini"
           create: yes
@@ -63,7 +56,6 @@
             - "upload_max_filesize = 32M"
   
     - name: create folders for theme upload
-      become: yes
       file:
        path: "/var/www/wordpress/wp-content/{{item}}"
        state: directory
@@ -75,7 +67,6 @@
           - "plugins"
   
     - name: configure ftp server for theme upload
-      become: yes
       lineinfile:
          dest: "/etc/vsftpd.conf"
          create: yes
