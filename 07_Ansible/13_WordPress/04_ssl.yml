@@ -4,6 +4,5 @@
   tasks:
   - name: generate self signed certificate
     command: openssl req -nodes -newkey rsa:2048 -keyout /etc/apache2/thesite.key -out /etc/apache2/thesite.crt -x509 -days 365 -subj "/C=RO/L=Iasi/O=testing/CN=www.testing.eu" -passout pass:""
-    creates: /etc/apache2/thesite.crt 
     notify: reload apache
 
