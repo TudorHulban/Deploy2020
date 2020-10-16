@@ -31,6 +31,11 @@ https://wordpress.org/plugins/woocommerce-direct-checkout/
 https://wordpress.org/plugins/wp-file-manager/
 ```
 6. Localization
+Plugin: Polylang
+```
+https://wordpress.org/plugins/polylang/
+```
+Translation file:
 ```
 https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/ro/default/
 ```
