@@ -44,7 +44,7 @@ Plugin: Polylang
 ```
 https://wordpress.org/plugins/polylang/
 ```
-Translation file:
+Add translation file:
 ```
 https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/ro/default/
 ```
