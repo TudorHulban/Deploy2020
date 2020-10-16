@@ -31,6 +31,15 @@ SELECT DATABASE();
 Installation provides port 80 for connnection.<br/>
 Connect to container using SSH port forwarding.
 
+## Notes
+Activate Mod_Rewrites:
+```
+sudo a2enmod rewrite
+```
+```
+https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite
+```
+
 #### Resources
 ```html
 https://www.digitalocean.com/community/tutorials/how-to-use-ansible-to-install-and-set-up-wordpress-with-lamp-on-ubuntu-18-04
