@@ -30,6 +30,10 @@ https://wordpress.org/plugins/woocommerce-direct-checkout/
 ```
 https://wordpress.org/plugins/wp-file-manager/
 ```
+6. Localization
+```
+https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/ro/default/
+```
 
 ## Resources
 ```
