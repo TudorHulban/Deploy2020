@@ -16,12 +16,6 @@
     - name: extract wordpress
       unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
   
-    - name: update default Apache configuration
-      lineinfile:
-       dest: /etc/apache2/sites-enabled/000-default.conf
-       regexp: "(.)+DocumentRoot /var/www/html"
-       line: "DocumentRoot /var/www/wordpress"
-  
     - name: update Apache configuration
       lineinfile:
        dest=/etc/apache2/apache2.conf
