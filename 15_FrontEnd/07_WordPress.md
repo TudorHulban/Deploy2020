@@ -22,6 +22,14 @@ Template Name: Template Page
 1. Import Astra theme
 2. Import Starter templates
 3. Pick template from starter templates library
+4. Plugin: Direct Checkout, Added to cart alert - Yes
+```
+https://wordpress.org/plugins/woocommerce-direct-checkout/
+```
+5. Plugin: File Manager
+```
+https://wordpress.org/plugins/wp-file-manager/
+```
 
 ## Resources
 ```
