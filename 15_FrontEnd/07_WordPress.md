@@ -18,6 +18,10 @@ Template Name: Template Page
 
 <?php get_footer(); ?>
 ```
+## Flow
+1. Import Astra theme
+2. Import Starter templates
+3. Pick template from starter templates library
 
 ## Resources
 ```
