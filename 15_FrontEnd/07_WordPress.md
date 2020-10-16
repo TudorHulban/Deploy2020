@@ -19,8 +19,17 @@ Template Name: Template Page
 <?php get_footer(); ?>
 ```
 ## Flow
+Delete existing pages.
 1. Import Astra theme
-2. Import Starter templates
+Delete existing inactive themes:
+```
+rm -rf t*
+```
+2. Plugin: Starter templates<br/>
+See library and pick for Elementor.
+```
+https://wordpress.org/plugins/astra-sites/
+```
 3. Pick template from starter templates library
 4. Plugin: Direct Checkout, Added to cart alert - Yes
 ```
