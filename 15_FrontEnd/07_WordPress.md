@@ -20,26 +20,27 @@ Template Name: Template Page
 ```
 ## Flow
 Delete existing pages.
-1. Import Astra theme
+### Import Astra theme
 Delete existing inactive themes:
 ```
 rm -rf t*
 ```
-2. Plugin: Starter templates<br/>
+### Plugin: Starter templates<br/>
 See library and pick for Elementor.
 ```
 https://wordpress.org/plugins/astra-sites/
 ```
-3. Pick template from starter templates library
-4. Plugin: Direct Checkout, Added to cart alert - Yes
+### Pick template from starter templates library
+### Plugin: Direct Checkout
+Added to cart alert - Yes.
 ```
 https://wordpress.org/plugins/woocommerce-direct-checkout/
 ```
-5. Plugin: File Manager
+### Plugin: File Manager
 ```
 https://wordpress.org/plugins/wp-file-manager/
 ```
-6. Localization
+### Localization
 Plugin: Polylang
 ```
 https://wordpress.org/plugins/polylang/
@@ -48,6 +49,16 @@ Add translation file:
 ```
 https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/ro/default/
 ```
+in
+```
+mkdir -p /var/www/wordpress/wp-content/languages/woocommerce
+chmod 777 /var/www/wordpress/wp-content/languages/woocommerce
+```
+#### Resources
+```
+https://docs.woocommerce.com/document/woocommerce-localization/
+```
+
 
 ## Resources
 ```
