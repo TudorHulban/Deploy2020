@@ -38,22 +38,19 @@ https://wordpress.org/plugins/woocommerce-direct-checkout/
 ```
 ### Plugin: File Manager
 ```
-https://wordpress.org/plugins/wp-file-manager/
+https://wordpress.org/plugins/file-manager-advanced/
 ```
 ### Localization
-Plugin: Polylang
+#### Add language 
+Go to Settings -> Site Language. Choose language needed. This is in order to automatically download language packs.<br/>
+Revert to English after verifying the downloads in /wordpress/wp-content/languages.
+
+#### Add Plugin WPGlobus
 ```
-https://wordpress.org/plugins/polylang/
+https://wordpress.org/plugins/wpglobus/
 ```
-Add translation file:
-```
-https://translate.wordpress.org/projects/wp-plugins/woocommerce/stable/ro/default/
-```
-in
-```
-mkdir -p /var/www/wordpress/wp-content/languages/woocommerce
-chmod 777 /var/www/wordpress/wp-content/languages/woocommerce
-```
+From plugin settings add the language previously added.
+
 #### Resources
 ```
 https://docs.woocommerce.com/document/woocommerce-localization/
