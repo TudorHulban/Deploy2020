@@ -67,6 +67,10 @@ $p_fields['postcode']['required'] = false;
 return $p_fields;
 }
 ```
+### Plugin: Wishlist
+```
+https://wordpress.org/plugins/ti-woocommerce-wishlist/
+```
 
 ## Resources
 ```
