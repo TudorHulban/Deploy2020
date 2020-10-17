@@ -49,7 +49,8 @@ Revert to English after verifying the downloads in /wordpress/wp-content/languag
 ```
 https://wordpress.org/plugins/wpglobus/
 ```
-From plugin settings add the language previously added.
+From plugin settings add the language previously added.<br/>
+Note: Deactivate plugin when performing general updates, ex. changing country or currency.
 
 #### Resources
 ```
