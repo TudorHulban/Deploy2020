@@ -18,6 +18,8 @@
        - php-xml
        - php-curl
        - php-gd
+       - php-zip
+       - php-imagick
        - php-mbstring
        - vsftpd
        - openssl
