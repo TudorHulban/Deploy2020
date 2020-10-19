@@ -67,6 +67,11 @@ $p_fields['postcode']['required'] = false;
 return $p_fields;
 }
 ```
+### Plugin: Dynamic Pricing
+```
+https://wordpress.org/plugins/aco-woo-dynamic-pricing/
+```
+
 ### Plugin: Wishlist
 ```
 https://wordpress.org/plugins/ti-woocommerce-wishlist/
