@@ -14,6 +14,10 @@ https://mxlinux.org/wiki/system/systemd/
 sudo systemctl set-default multi-user.target
 sudo systemctl get-default  # verify mode
 ```
+Note: If needed in order to revert.
+```
+systemctl set-default graphical.target
+```
 ### Disable splash
 ```
 sudo vi /etc/default/grub
