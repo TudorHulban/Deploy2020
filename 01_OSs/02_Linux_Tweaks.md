@@ -100,6 +100,11 @@ systemctl --type=service --state=active list-units
 ```html
 https://dev.to/javinpaul/10-simple-linux-tips-which-save-50-of-my-time-in-the-command-line-4moo?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
 ```
+## Linux MX
+Clear unused apps.
+```
+sudo apt autoremove gnome-mahjongg lbreakout2 peg-e swell-foop
+```
 
 ## Resources
 ```
