@@ -67,6 +67,11 @@ $p_fields['postcode']['required'] = false;
 return $p_fields;
 }
 ```
+### Plugin: Custom Product Tabs
+```
+https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/
+```
+
 ### Plugin: Dynamic Pricing
 ```
 https://wordpress.org/plugins/aco-woo-dynamic-pricing/
