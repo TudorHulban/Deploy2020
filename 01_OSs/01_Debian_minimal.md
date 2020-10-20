@@ -55,6 +55,11 @@ If preferences not saved make sure file exists and user owns:
 LXTerminal is a non-login shell. 
 The start-up script is ~/.bashrc, not ~/.bash_profile or ~/.profile.
 
+### Check memory
+```
+sudo dmidecode --type 17
+```
+
 ## Create desktop entries  ([Up](#top))
 ```
 vi <shortcut>
