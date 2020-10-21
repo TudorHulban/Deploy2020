@@ -82,6 +82,12 @@ https://wordpress.org/plugins/aco-woo-dynamic-pricing/
 https://wordpress.org/plugins/ti-woocommerce-wishlist/
 ```
 
+### Plugin: WP Maintenance Mode
+```
+https://wordpress.org/plugins/wp-maintenance-mode/
+```
+
+
 ## Resources
 ```
 https://www.tutorialspoint.com/wordpress/index.htm
