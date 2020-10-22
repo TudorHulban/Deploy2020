@@ -87,6 +87,10 @@ https://wordpress.org/plugins/ti-woocommerce-wishlist/
 https://wordpress.org/plugins/wp-maintenance-mode/
 ```
 
+### Plugin: Slimstat
+```
+https://wordpress.org/plugins/wp-slimstat/
+```
 
 ## Resources
 ```
