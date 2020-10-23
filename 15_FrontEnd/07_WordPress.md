@@ -92,6 +92,11 @@ https://wordpress.org/plugins/wp-maintenance-mode/
 https://wordpress.org/plugins/wp-slimstat/
 ```
 
+### Plugin: Autoptimize
+Check results at GTmetrix.
+```
+https://wordpress.org/plugins/autoptimize/
+```
 ## Resources
 ```
 https://www.tutorialspoint.com/wordpress/index.htm
