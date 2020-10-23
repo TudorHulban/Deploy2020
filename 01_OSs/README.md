@@ -106,6 +106,10 @@ sudo apt update
 sudo apt install brave-browser
 ```
 No cache option for RAM disk as per October 2020.
+#### Resources
+```
+https://brave.com/linux/
+```
 ### Firefox ESR
 ```bash
 apt-get install firefox-esr
