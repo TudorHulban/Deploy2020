@@ -97,12 +97,15 @@ find -name *.mp4 -exec mv {} . \;
 ```bash
 apt install network-manager
 ```
-### SlimJet browser
+### Browser with Ad-blocker
 ```bash
-sudo apt install slimjet  # if not work download and install as non root
-sudo gdebi slimjet_amd64.deb
+sudo apt install apt-transport-https curl
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
 ```
-Set cache for for RAM disk.
+No cache option for RAM disk as per October 2020.
 ### Firefox ESR
 ```bash
 apt-get install firefox-esr

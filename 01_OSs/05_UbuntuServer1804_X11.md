@@ -6,11 +6,6 @@ sudo apt-get install lubuntu-core lxappearance obconf qpdfview
 sudo dpkg-reconfigure tzdata
 ```
 
-## Transfer SlimJet
-```bash
-scp slimjet_amd64.deb tudi@192.168.1.18:/home/tudi/Downloads
-```
-
 ## Install Wine
 ```bash
 sudo apt install wine-stable
