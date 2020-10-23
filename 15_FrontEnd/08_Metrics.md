@@ -1,0 +1,4 @@
+### Resources
+```
+https://gtmetrix.com/
+```
