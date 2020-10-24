@@ -1,4 +1,23 @@
 # WordPress: First steps
+## Run Wordpress
+Use Docker Compose below file.
+```
+web:
+    image: wordpress
+    links:
+     - mysql
+    environment:
+     - WORDPRESS_DB_PASSWORD=password
+    ports:
+     - "127.0.0.1:8080:80"
+mysql:
+    image: mysql:5.7
+    environment:
+     - MYSQL_ROOT_PASSWORD=password
+     - MYSQL_DATABASE=wordpress
+```
+
+
 ## Load CSS file
 ```html
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
