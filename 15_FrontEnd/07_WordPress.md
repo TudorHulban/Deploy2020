@@ -17,7 +17,6 @@ mysql:
      - MYSQL_DATABASE=wordpress
 ```
 
-
 ## Load CSS file
 ```html
 <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
@@ -55,9 +54,33 @@ Added to cart alert - Yes.
 ```
 https://wordpress.org/plugins/woocommerce-direct-checkout/
 ```
+## Maintenance
 ### Plugin: File Manager
+Only for non production environments.
 ```
 https://wordpress.org/plugins/file-manager-advanced/
+```
+
+### Plugin: WP Maintenance Mode
+```
+https://wordpress.org/plugins/wp-maintenance-mode/
+```
+
+### Plugin: BackWPup
+```
+https://wordpress.org/plugins/backwpup/
+```
+
+## WooCommerce
+### Make postal code optional
+In (child theme) in file ../wordpress/wp-content/themes/astra/functions.php add at last:
+```
+// Make zip/postcode field optional
+add_filter( 'woocommerce_default_address_fields' , 'optional_postcode_checkout' );
+function optional_postcode_checkout( $p_fields ) {
+$p_fields['postcode']['required'] = false;
+return $p_fields;
+}
 ```
 ### Localization
 #### Add language 
@@ -76,16 +99,6 @@ Note: Deactivate plugin when performing general updates, ex. changing country or
 https://docs.woocommerce.com/document/woocommerce-localization/
 ```
 
-### Make postal code optional
-In (child theme) in file ../wordpress/wp-content/themes/astra/functions.php add at last:
-```
-// Make zip/postcode field optional
-add_filter( 'woocommerce_default_address_fields' , 'optional_postcode_checkout' );
-function optional_postcode_checkout( $p_fields ) {
-$p_fields['postcode']['required'] = false;
-return $p_fields;
-}
-```
 ### Plugin: Custom Product Tabs
 ```
 https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/
@@ -101,27 +114,25 @@ https://wordpress.org/plugins/aco-woo-dynamic-pricing/
 https://wordpress.org/plugins/ti-woocommerce-wishlist/
 ```
 
-### Plugin: WP Maintenance Mode
-```
-https://wordpress.org/plugins/wp-maintenance-mode/
-```
-
 ### Plugin: Slimstat
 ```
 https://wordpress.org/plugins/wp-slimstat/
 ```
 
+## Performance
 ### Plugin: Autoptimize
 Check results at GTmetrix.
 ```
 https://wordpress.org/plugins/autoptimize/
 ```
 
+## SEO
 ### Plugin: Yoast SEO
 Check results at seobility.net.
 ```
 https://wordpress.org/plugins/wordpress-seo/
 ```
+
 ## Resources
 ```
 https://www.tutorialspoint.com/wordpress/index.htm
