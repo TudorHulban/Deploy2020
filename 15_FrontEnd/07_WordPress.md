@@ -116,6 +116,12 @@ Check results at GTmetrix.
 ```
 https://wordpress.org/plugins/autoptimize/
 ```
+
+### Plugin: Yoast SEO
+Check results at seobility.net.
+```
+https://wordpress.org/plugins/wordpress-seo/
+```
 ## Resources
 ```
 https://www.tutorialspoint.com/wordpress/index.htm
