@@ -16,6 +16,7 @@ sudo apt update
 sudo apt install php7.2
 sudo apt install php7.2-cli php7.2-common php7.2-curl php7.2-mbstring php7.2-mysql php7.2-xml
 ```
+
 ## 4. VS Code Extensions
 ```
 PHP IntelliSense - https://marketplace.visualstudio.com/...
@@ -34,4 +35,9 @@ MySQL - https://marketplace.visualstudio.com/...
 ### Resources
 ```
 https://www.youtube.com/watch?v=v9dWFbiir9Q
+```
+
+## 5. Install Pear
+```html
+https://gist.github.com/PatelUtkarsh/139b4e0db29f2e6cd3466fa129b9a02a
 ```
