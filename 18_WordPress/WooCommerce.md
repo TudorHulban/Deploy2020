@@ -8,3 +8,12 @@ $p_fields['postcode']['required'] = false;
 return $p_fields;
 }
 ```
+
+### Find Products
+```sql
+SELECT * FROM `wp_posts` WHERE `post_type` = "product"
+```
+#### Resources
+```
+https://wp-staging.com/in-which-database-table-is-woocommerce-storing-products/
+```
