@@ -19,7 +19,7 @@ Note: If needed in order to revert.
 systemctl set-default graphical.target
 ```
 ### Disable splash
-```
+```bash
 sudo vi /etc/default/grub
 # update line to
 GRUB_CMDLINE_LINUX_DEFAULT="quiet"
@@ -42,7 +42,7 @@ sudo apt install snapd
 snap install core
 ```
 ## Start snap service
-```
+```bash
 sudo systemctl unmask snapd.service
 sudo systemctl enable snapd.service
 sudo systemctl start snapd.service

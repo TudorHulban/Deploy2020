@@ -3,7 +3,7 @@
 
 ### OpenSSL
 OpenSSL for Ansible:
-```
+```bash
 sudo pip install pyOpenSSL
 ```
 

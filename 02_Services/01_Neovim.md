@@ -6,7 +6,7 @@ sudo apt-get install neovim
 Get binary version with `nvim --version`.
 
 ### Python support
-```
+```bash
 sudo apt-get install python-neovim
 sudo apt-get install python3-neovim
 ```

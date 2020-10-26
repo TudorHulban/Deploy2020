@@ -14,7 +14,7 @@ npm run dev
 ```
 ## Svelte context
 App.svelte
-```svelte
+```js
 <script>
   import { onMount } from "svelte";
   import { getContext } from "svelte";
@@ -29,7 +29,7 @@ App.svelte
 <C1 />
 ```
 C1.svelte
-```svelte
+```js
 <script>
   import { onMount } from "svelte";
   import { setContext } from "svelte";
@@ -43,13 +43,14 @@ C1.svelte
 ```
 ## Svelte store
 store.js
-```svelte
+```js
 import { writable } from 'svelte/store';
 
 let productStore = [
   { id: 1, name: 'Product 1', price: 5.99 },
   { id: 2, name: 'Product 2', price: 1.99 }
 ];
+
 function createProducts() {
   const { subscribe } = writable(productStore);
 
@@ -57,10 +58,11 @@ function createProducts() {
     subscribe
   };
 }
+
 export let products = createProducts();
 ```
 App.svelte
-```svelte
+```js
 <script>
   import { products } from "./store.js";
 

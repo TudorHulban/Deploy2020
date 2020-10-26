@@ -1,6 +1,6 @@
 # Svelte: Store Update
 ## App.svelte
-```svelte
+```js
 <script>
   import { products } from "./store.js";
   import C1 from "./C1.svelte";
@@ -12,7 +12,7 @@
 <C1 />
 ```
 ## C1.svelte
-```svelte
+```js
 <script>
   import { products } from "./store.js";
 
@@ -28,7 +28,7 @@
 <button on:click={decrement}>D</button>
 ```
 ## store.js
-```svelte
+```js
 import { writable } from 'svelte/store';
 
 let productStore = [
