@@ -2,19 +2,48 @@
 ## Run Wordpress
 Use Docker Compose below file.
 ```
-web:
-    image: wordpress
-    links:
-     - mysql
-    environment:
-     - WORDPRESS_DB_PASSWORD=password
-    ports:
-     - "127.0.0.1:8080:80"
-mysql:
+version: '3'
+
+services:  
+  mysql:
     image: mysql:5.7
+    container_name: database
     environment:
      - MYSQL_ROOT_PASSWORD=password
      - MYSQL_DATABASE=wordpress
+     - MYSQL_USER=wordpress
+     - MYSQL_PASSWORD=admin
+    volumes:
+     - dbdata=/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  wordpress:
+        image: wordpress
+        container_name: wp
+        links:
+         - mysql
+        environment:
+         - WORDPRESS_DB_PASSWORD=password
+        ports:
+         - 8080:80
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+
+volumes:
+  dbdata:
+
 ```
 
 ## Load CSS file
