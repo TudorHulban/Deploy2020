@@ -134,6 +134,7 @@ https://docs.woocommerce.com/document/woocommerce-localization/
 
 ## Plugins Protection
 ### WP Content Copy Protection
+Deactivate plugin while performing changes on site.
 ```
 https://wordpress.org/plugins/wp-content-copy-protection/
 ```
