@@ -132,6 +132,12 @@ Note: Deactivate plugin when performing general updates, ex. changing country or
 https://docs.woocommerce.com/document/woocommerce-localization/
 ```
 
+## Plugins Protection
+### WP Content Copy Protection
+```
+https://wordpress.org/plugins/wp-content-copy-protection/
+```
+
 ## Resources
 ```
 https://www.tutorialspoint.com/wordpress/index.htm
