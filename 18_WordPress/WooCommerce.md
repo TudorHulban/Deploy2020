@@ -42,6 +42,10 @@ return $rates;
 }
 add_action( 'woocommerce_package_rates', 'only_show_free_shipping_rate_when_available', 10, 2 );
 ```
+#### Resources
+```
+https://wordpress.org/support/topic/free-flat-rate-shipping/
+```
 
 
 ### Find Products
