@@ -1,3 +1,6 @@
+## WordPress Snippets
+Use plugin `Code Snippets` (`https://wordpress.org/plugins/code-snippets/`) or manually update `functions.php`.
+
 ### Make postal code optional
 In (child theme) in file ../wordpress/wp-content/themes/astra/functions.php add at last:
 ```php
