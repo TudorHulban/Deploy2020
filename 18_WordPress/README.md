@@ -120,6 +120,7 @@ https://wordpress.org/plugins/autoptimize/
 ```
 https://wordpress.org/plugins/cookie-law-info/
 ```
+Disable show again tab.<br/>
 Check cookies:
 ```
 https://www.cookieserve.com/
