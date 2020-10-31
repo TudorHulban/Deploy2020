@@ -115,6 +115,16 @@ Check results at GTmetrix.
 https://wordpress.org/plugins/autoptimize/
 ```
 
+## Plugins Legal
+### GDPR Cookie Consent
+```
+https://wordpress.org/plugins/cookie-law-info/
+```
+Text:
+```html
+<div class="cli-bar-container cli-style-v2"><div class="cli-bar-message">Utilizăm cookie-uri si alte tehnologii similare pentru a imbunatati experienta dumneavoastră. de navigare si functionalitatea site-ului nostru. Continuarea navigarii implica acceptarea lor. </div><div class="cli-bar-btn_container">[cookie_settings margin="0px 10px 0px 5px"][cookie_button]</div></div>
+```
+
 ## Localization
 ### Add language 
 Go to Settings -> Site Language. Choose language needed. This is in order to automatically download language packs.<br/>
