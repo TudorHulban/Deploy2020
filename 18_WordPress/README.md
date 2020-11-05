@@ -142,12 +142,6 @@ https://wordpress.org/plugins/wpglobus/
 From plugin settings add the language previously added.<br/>
 Note: Deactivate plugin when performing general updates, ex. changing country or currency.
 
-### Add Plugin Admin Language
-Keeps site administration in English.
-```
-https://wordpress.org/plugins/admin-language-per-user/
-```
-
 ### Resources
 ```
 https://docs.woocommerce.com/document/woocommerce-localization/
