@@ -89,9 +89,14 @@ https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/
 ```
 https://wordpress.org/plugins/aco-woo-dynamic-pricing/
 ```
+### Back in Stock
+Kadence - compatible with 1.0.2.
+```
+https://wordpress.org/plugins/back-in-stock-notifier-for-woocommerce/
+```
 
 ### Wishlist
-Astra - Compatible.
+Astra - Compatible.<br/>
 Kadence - Not compatible with version 1.0.2.
 ```
 https://wordpress.org/plugins/ti-woocommerce-wishlist/
