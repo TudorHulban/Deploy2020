@@ -42,6 +42,21 @@ return $rates;
 }
 add_action( 'woocommerce_package_rates', 'only_show_free_shipping_rate_when_available', 10, 2 );
 ```
+### Show out of stock in search
+```
+// display an 'Out of Stock' label on archive pages
+add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_stock', 10 );
+function woocommerce_template_loop_stock() {
+    global $product;
+    if ( ! $product->managing_stock() && ! $product->is_in_stock() )
+        echo '<p class="stock out-of-stock">Out of Stock</p>';
+}
+```
+#### Resources
+```
+https://wisdmlabs.com/blog/woocommerce-add-out-of-stock-label-on-shop-page/
+```
+
 #### Resources
 ```
 https://wordpress.org/support/topic/free-flat-rate-shipping/
