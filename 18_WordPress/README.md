@@ -91,6 +91,8 @@ https://wordpress.org/plugins/aco-woo-dynamic-pricing/
 ```
 
 ### Wishlist
+Astra - Compatible.
+Kadence - Not compatible with version 1.0.2.
 ```
 https://wordpress.org/plugins/ti-woocommerce-wishlist/
 ```
