@@ -102,6 +102,12 @@ Kadence - Not compatible with version 1.0.2.
 https://wordpress.org/plugins/ti-woocommerce-wishlist/
 ```
 
+### Minimum Order Amount
+Kadence - Not compatible with version 1.0.2.
+```
+https://wordpress.org/plugins/elex-minimum-order-amount-for-woocommerce/
+```
+
 ## Plugins SEO
 ### Yoast SEO
 Check results at seobility.net.
