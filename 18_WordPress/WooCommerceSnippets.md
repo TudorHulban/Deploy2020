@@ -49,7 +49,8 @@ https://wordpress.org/support/topic/free-flat-rate-shipping/
 ```
 
 ### BOGO
-Buy one get one free.
+Buy one get one free.<br/>
+Visibility on gifted is hidden.
 ```php
 add_action( 'template_redirect', 'bbloomer_add_gift_if_id_in_cart' );
  
