@@ -73,6 +73,10 @@ https://wordpress.org/plugins/wp-maintenance-mode/
 ```
 https://wordpress.org/plugins/backwpup/
 ```
+### Reset DB
+```
+https://wordpress.org/support/plugin/advanced-wp-reset/
+```
 
 ## Plugins WooCommerce
 ### Direct Checkout
