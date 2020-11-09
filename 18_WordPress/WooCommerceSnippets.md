@@ -15,7 +15,7 @@ return $p_fields;
 ### Show only Free Shipping 
 Below shows only free shipping method when available.<br/>
 ../wordpress/wp-content/themes/astra/functions.php add at last:
-```
+```php
 // Only show all free shipping rates when available
 function only_show_free_shipping_rate_when_available( $rates, $package ) {
 
@@ -50,7 +50,7 @@ https://wordpress.org/support/topic/free-flat-rate-shipping/
 
 ### BOGO
 Buy one get one free.
-```
+```php
 add_action( 'template_redirect', 'bbloomer_add_gift_if_id_in_cart' );
  
 function bbloomer_add_gift_if_id_in_cart() {
@@ -73,7 +73,7 @@ function bbloomer_add_gift_if_id_in_cart() {
 	  return; 
    } 
      
-    if ( $product_gifted_in_cart ) WC()->cart->remove_cart_item( $product_gifted_in_cart );
+   if ( $product_gifted_in_cart ) WC()->cart->remove_cart_item( $product_gifted_in_cart );
 }
 ```
 #### Resources
@@ -82,7 +82,7 @@ https://www.businessbloomer.com/woocommerce-buy-1-product-add-free-product-cart-
 ```
 
 ### Show out of stock in search
-```
+```php
 // display an 'Out of Stock' label on archive pages
 add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_stock', 10 );
 function woocommerce_template_loop_stock() {
@@ -107,7 +107,7 @@ https://wp-staging.com/in-which-database-table-is-woocommerce-storing-products/
 
 ### Kadence - no zoom on image on product page
 Customize -> Additional CSS
-```
+```css
 /* Turn of zoom pointer in woocommerce product */
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
     pointer-events: none;
