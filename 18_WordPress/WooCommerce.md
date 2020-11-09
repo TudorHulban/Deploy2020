@@ -42,6 +42,12 @@ return $rates;
 }
 add_action( 'woocommerce_package_rates', 'only_show_free_shipping_rate_when_available', 10, 2 );
 ```
+
+#### Resources
+```
+https://wordpress.org/support/topic/free-flat-rate-shipping/
+```
+
 ### Show out of stock in search
 ```
 // display an 'Out of Stock' label on archive pages
@@ -57,12 +63,6 @@ function woocommerce_template_loop_stock() {
 https://wisdmlabs.com/blog/woocommerce-add-out-of-stock-label-on-shop-page/
 ```
 
-#### Resources
-```
-https://wordpress.org/support/topic/free-flat-rate-shipping/
-```
-
-
 ### Find Products
 ```sql
 SELECT * FROM `wp_posts` WHERE `post_type` = "product"
@@ -70,4 +70,17 @@ SELECT * FROM `wp_posts` WHERE `post_type` = "product"
 #### Resources
 ```
 https://wp-staging.com/in-which-database-table-is-woocommerce-storing-products/
+```
+
+### Kadence - no zoom on image on product page
+Customize -> Additional CSS
+```
+/* Turn of zoom pointer in woocommerce product */
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+    pointer-events: none;
+}
+```
+#### Resources
+```
+https://ideaspot.com.au/blog/kadence-woocommerce-tutorial/
 ```
