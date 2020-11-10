@@ -82,6 +82,27 @@ CSS - Circle Style
 }
 ```
 
+CSS - Simple
+```css
+.woocommerce ul.products li.product .new-badge.onsale {
+	background: #ffcc00;
+	top: 0.0em;
+	z-index: 10;
+	right: auto; 
+	color: #000;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	border-radius: 0px;
+	min-width: 40px;
+	padding-left: 10px !important;
+}
+
+span.new-badge.onsale {
+min-width: 60px;
+}
+```
+
 ## Resources
 ```
 https://wpsimplehacks.com/how-to-display-new-badge-on-woocommerce-recent-products/
