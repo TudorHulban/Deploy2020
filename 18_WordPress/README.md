@@ -106,6 +106,11 @@ Kadence - Not compatible with version 1.0.2.
 https://wordpress.org/plugins/ti-woocommerce-wishlist/
 ```
 
+### Shipment Tracking
+```
+https://wordpress.org/plugins/woo-advanced-shipment-tracking/
+```
+
 ### Minimum Order Amount
 Kadence - Not compatible with version 1.0.2.
 ```
