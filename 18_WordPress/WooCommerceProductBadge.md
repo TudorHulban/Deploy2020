@@ -81,3 +81,8 @@ CSS - Circle Style
 	left: .5em;
 }
 ```
+
+## Resources
+```
+https://wpsimplehacks.com/how-to-display-new-badge-on-woocommerce-recent-products/
+```
