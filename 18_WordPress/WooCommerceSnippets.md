@@ -48,6 +48,41 @@ add_action( 'woocommerce_package_rates', 'only_show_free_shipping_rate_when_avai
 https://wordpress.org/support/topic/free-flat-rate-shipping/
 ```
 
+### Show product already in cart
+```php
+// Change button for single products
+ 
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'already_in_cart_single_product' );
+function already_in_cart_single_product( $label ) {
+   foreach( WC()->cart->get_cart() as $cart_item_key => $values ) {
+      $product = $values['data'];
+      if( get_the_ID() == $product->get_id() ) {
+         $label = __('Product already in Cart. Add again?', 'woocommerce');
+      }
+   } 
+   return $label;
+}
+ 
+// Change button for archive page products
+ 
+add_filter( 'woocommerce_product_add_to_cart_text', 'already_in_cart_archive_product', 99, 2 );
+function already_in_cart_archive_product( $label, $product ) {
+   if ( $product->get_type() == 'simple' && $product->is_purchasable() && $product->is_in_stock() ) {
+      foreach( WC()->cart->get_cart() as $cart_item_key => $values ) {
+         $_product = $values['data'];
+         if( get_the_ID() == $_product->get_id() ) {
+            $label = __('Product already in Cart. Add again?', 'woocommerce');
+         }
+      }
+   }
+   return $label;
+}
+```
+#### Resources
+```
+https://wpsimplehacks.com/how-to-show-product-already-in-cart/
+```
+
 ### BOGO
 Buy one get one free.<br/>
 Visibility on gifted is hidden.
