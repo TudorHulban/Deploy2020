@@ -58,6 +58,10 @@ https://wordpress.org/plugins/astra-sites/
 ```
 
 ## Plugins Maintenance
+### Image Optimization
+```
+https://wordpress.org/plugins/ewww-image-optimizer/
+```
 ### File Manager
 Only for non production environments.
 ```
