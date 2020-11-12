@@ -144,6 +144,10 @@ https://wordpress.org/plugins/autoptimize/
 ```
 https://wordpress.org/plugins/far-future-expiry-header/
 ```
+### Database Optimization
+```
+https://wordpress.org/plugins/rvg-optimize-database/
+```
 
 ## Plugins Legal
 ### GDPR Cookie Consent
