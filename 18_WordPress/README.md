@@ -140,6 +140,10 @@ Check results at GTmetrix.
 ```
 https://wordpress.org/plugins/autoptimize/
 ```
+### Expire Headers
+```
+https://wordpress.org/plugins/far-future-expiry-header/
+```
 
 ## Plugins Legal
 ### GDPR Cookie Consent
