@@ -127,6 +127,10 @@ Check results at seobility.net.
 ```
 https://wordpress.org/plugins/wordpress-seo/
 ```
+#### Resources
+```
+https://speckyboy.com/on-page-seo/
+```
 
 ## Plugins Analytics
 ### Slimstat
