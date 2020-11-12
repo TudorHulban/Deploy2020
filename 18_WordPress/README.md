@@ -136,7 +136,7 @@ https://wordpress.org/plugins/wp-slimstat/
 
 ## Plugins Performance
 ### Autoptimize
-Check results at GTmetrix.
+Check results at GTmetrix, seositecheckup.com.
 ```
 https://wordpress.org/plugins/autoptimize/
 ```
