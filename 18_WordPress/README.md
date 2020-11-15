@@ -79,7 +79,7 @@ https://wordpress.org/plugins/backwpup/
 ```
 ### Reset DB
 ```
-https://wordpress.org/support/plugin/advanced-wp-reset/
+https://wordpress.org/plugins/advanced-wp-reset/
 ```
 
 ## Plugins WooCommerce
