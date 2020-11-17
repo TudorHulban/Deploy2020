@@ -94,7 +94,7 @@ vi Dockerfile
 ## Docker Image <a name="image"></a> ([Up](#top))
 ### Create docker image based on a Docker file
 ```bash
-sudo docker build - < Dockerfile
+sudo docker build -t imageName .
 ```
 #### Check newly created image:
 ```bash
