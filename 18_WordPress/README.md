@@ -44,6 +44,10 @@ services:
 volumes:
   dbdata:
 ```
+### Resources
+```
+https://devtidbits.com/2019/11/02/customise-wordpress-on-docker/
+```
 
 ## Themes
 Import Astra theme. Delete unused themes.
