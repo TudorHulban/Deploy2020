@@ -85,11 +85,17 @@ sudo dockerd &
 ```
 ## Dockerfile <a name="file"></a> ([Up](#top))
 ### Create docker file
-The dockerfile name should be Dockerfile.
+The implicit dockerfile name is Dockerfile.
+#### For HTTP testing
 ```bash
 vi Dockerfile
 # ex.
 # FROM basex/basexhttp:9.1
+```
+#### For general testing
+```
+FROM bitnami/minideb:latest
+CMD ["cat", "/etc/os-release"]
 ```
 ## Docker Image <a name="image"></a> ([Up](#top))
 ### Create docker image based on a Docker file
