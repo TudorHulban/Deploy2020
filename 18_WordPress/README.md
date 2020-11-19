@@ -1,6 +1,14 @@
 # WordPress
 ## Docker Run
-Use Docker Compose below file.
+Create sandbox:
+```bash
+docker-compose up -d
+```
+Clean with:
+```bash
+docker-compose down
+```
+Docker Compose file:
 ```yaml
 version: '3.7'
 
