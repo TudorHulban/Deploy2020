@@ -2,7 +2,7 @@
 ## Docker Run
 Use Docker Compose below file.
 ```yaml
-version: '3'
+version: '3.7'
 
 services:  
   mysql:
@@ -27,6 +27,10 @@ services:
          - WORDPRESS_DB_PASSWORD=password
         ports:
          - 8080:80
+        volumes:
+         - type: bind
+           source: ./docker-uploads.ini
+           target: /usr/local/etc/php/conf.d/docker-uploads.ini
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -43,6 +47,17 @@ services:
 
 volumes:
   dbdata:
+```
+Extra settings file `docker-uploads.ini`.
+```
+# Allow HTTP file uploads
+file_uploads = On
+ 
+# Maximum size of an uploaded file
+upload_max_filesize = 64M
+ 
+# Maximum size of form post data
+post_max_size = 64M
 ```
 ### Resources
 ```
