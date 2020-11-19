@@ -21,10 +21,13 @@ sudo timedatectl set-timezone Europe/Bucharest
 
 ## RAM and Disk <a name="ram"></a> ([Up](#top))
 ### RAM Disk
+One disk for general purpose and one for Docker images. Consider changing mode to 777 for the created directories.
 ```bash
 sudo mkdir /mnt/tmpfs.ramdisk
+sudo mkdir /mnt/tmpfs.docker
 sudo vi /etc/fstab
 tmpfs   /mnt/tmpfs.ramdisk  tmpfs  nodev,nosuid,nodiratime,size=100M 0  0
+tmpfs   /mnt/tmpfs.docker tmpfs  nodev,nosuid,nodiratime,size=9100M 0  0
 ln -s /mnt/tmpfs.ramdisk $HOME/ram
 ```
 Make terminal shortcut open in RAM disk:
