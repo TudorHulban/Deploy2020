@@ -141,12 +141,10 @@ nmap -sP 192.168.1.0-45
 ```
 
 ## Media <a name="media"></a> ([Up](#top))
-### VLC
-```html
-https://community.linuxmint.com/software/view/vlc
+### MPV Player
+```bash
+sudo apt install mpv
 ```
-*if no image but sound change the video output to X11 <br/>
-mpeg 4 AAC codec for burner: sudo apt-get install gstreamer1.0-libav
 ### Color picker 
 ```bash
 sudo apt-get install gpick
