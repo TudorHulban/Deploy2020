@@ -62,7 +62,7 @@ Extra settings file `docker-uploads.ini`.
 file_uploads = On
  
 # Maximum size of an uploaded file
-upload_max_filesize = 64M
+upload_max_filesize = 256M
  
 # Maximum size of form post data
 post_max_size = 64M
