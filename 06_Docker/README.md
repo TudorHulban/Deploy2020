@@ -201,3 +201,7 @@ systemctl start docker.service
 # now the service should appear enabled
 systemctl list-unit-files | grep docker
 ```
+## Resources
+```
+https://github.com/gvilarino/docker-workshop
+```
