@@ -28,8 +28,19 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 # -l (lower-case L) can be added to just give the file name of matching files.
 ```
 ## GB Written <a name="written"></a> ([Up](#top))
+For SSD:
 ```bash
 sudo smartctl -A /dev/sda | awk '/^241/ { print "GBW: "($10 * 1024) * 1.0e-5, "GB" } '
+```
+For NVME:<br/>
+Install utility:
+```bash
+sudo apt install nvme-cli
+```
+and check:
+```bash
+nvme list
+nvme smart-log /dev/nvme0
 ```
 ## Lines of Code <a name="loc"></a> ([Up](#top))
 ```bash
