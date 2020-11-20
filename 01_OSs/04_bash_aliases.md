@@ -1,4 +1,8 @@
-## Debian
+## MX Linux
+Create shell for the commands:
+```bash
+touch ~/.bash_aliases
+```
 See commands with `alias`.
 ```sh
 alias ra='cd ~/ram'
