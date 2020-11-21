@@ -27,3 +27,9 @@ https://wiki.debian.org/BridgeNetworkConnections
 ```
 ebtables-save -> /etc/network/ebtables.rules
 ```
+### Update GRUB timeout
+```
+sudo vi /etc/default/grub
+# change TIMEOUT value
+sudo update-grub  # new configuration to be deployed
+```
