@@ -84,3 +84,7 @@ After IP address change regenerate self signed certificate:
 ```
 pvecm updatecerts --force
 ```
+### Resources
+```
+https://pve.proxmox.com/wiki/Network_Configuration
+```
