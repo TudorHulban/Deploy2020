@@ -78,3 +78,9 @@ pvcreate /dev/sdnewdisk
 vgcreate newgroup /dev/sdnewdisk
 ```
 Add new LVM volume from Proxmox GUI, **Datacenter** -> Storage -> Add: LVM.
+
+## 11. Regenerate Certificate
+After IP address change regenerate self signed certificate:
+```
+pvecm updatecerts --force
+```
