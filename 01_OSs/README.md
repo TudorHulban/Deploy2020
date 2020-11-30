@@ -145,6 +145,12 @@ nmap -sP 192.168.1.0-45
 ```bash
 sudo apt install mpv
 ```
+#### Configuration file
+```
+vi ~/.config/mpv/mpv.conf
+# add
+autofit-smaller=1024x768
+```
 ### Color picker 
 ```bash
 sudo apt-get install gpick
