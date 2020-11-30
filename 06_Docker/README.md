@@ -107,6 +107,10 @@ sudo docker build -t imageName .
 docker images -a
 docker history <img ID>
 ```
+#### Inspect image
+```
+docker image inspect imagename
+```
 #### Delete image (untagged):
 ```bash
 docker images -q |xargs docker rmi -f
