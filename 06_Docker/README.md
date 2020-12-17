@@ -45,6 +45,10 @@ On MX Linux the file to update:
 cd /etc/apt/sources.list.d/
 sudo vi mx.list
 ```
+On Ubuntu 20.04 LTS
+```
+https://allthings.how/how-to-install-docker-on-ubuntu-20-04-lts/
+```
 ## Install - Docker <a name="idocker"></a> ([Up](#top))
 ### Install Docker Community Edition:
 ```bash
