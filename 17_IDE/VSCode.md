@@ -2,3 +2,8 @@
 
 ## Plugins
 - Todo Tree
+
+## Resources
+```
+https://dev.to/codewithfahad/best-vs-code-extensions-themes-and-settings-for-web-developers-2020-3kc7?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
+```
