@@ -78,7 +78,8 @@ Reload cnfiguration:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart docker
-systemctl show --property=Environment docker
+# verify
+docker info
 ```
 ## Getting Started <a name="start"></a> ([Up](#top))
 ### Start Docker
