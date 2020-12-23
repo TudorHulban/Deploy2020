@@ -61,7 +61,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 ## Configuration <a name="config"></a> ([Up](#top))
-Images are stored for Debian in `/var/lib/docker/`. Information about the configuration:
+In default configuration images are stored for Debian in `/var/lib/docker/`. Information about the configuration:
 ```
 docker info
 ```
