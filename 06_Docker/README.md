@@ -61,6 +61,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 ## Configuration <a name="config"></a> ([Up](#top))
+Images are stored for Debian in `/var/lib/docker/`. Information about the configuration:
+```
+docker info
+```
 ### Make current user not use sudo
 Change will take place after full logout / log off.
 ```bash
@@ -78,8 +82,6 @@ Reload cnfiguration:
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl restart docker
-# verify
-docker info
 ```
 ## Getting Started <a name="start"></a> ([Up](#top))
 ### Start Docker
