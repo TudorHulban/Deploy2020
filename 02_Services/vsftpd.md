@@ -24,6 +24,7 @@ brew remove vsftpd
 ## Linux:
 ```bash
 sudo apt-get install vsftpd
+
 sudo vi /etc/vsftpd.conf
 #write_enable=YES
 sudo service vsftpd restart
