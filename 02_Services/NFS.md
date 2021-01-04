@@ -37,8 +37,9 @@ showmount -e <NFS server IP>
 ### Run client
 Mount locally:
 ```bash
-mkdir /home/nfs_local 
-mount <server IP>:/home/nfs /home/nfs_local 
+mkdir /mnt/nfs 
+sudo chmod 777 /mnt/nfs
+mount <server IP>:/exported_share /mnt/nfs
 ```
 Mount permanently:
 ```bash
