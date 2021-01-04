@@ -30,6 +30,10 @@ Load configuration:
 ```bash
 service nfs-kernel-server restart
 ```
+Verify configured shares are available:
+```bash
+showmount -e <NFS server IP>
+```
 ### Run client
 Mount locally:
 ```bash
@@ -46,4 +50,5 @@ vi /etc/fstab
 ### Resources
 ```
 https://askubuntu.com/questions/7117/which-to-use-nfs-or-samba
+https://www.cyberciti.biz/faq/howto-see-shares-on-nfs-server-exported-filesystems/
 ```
