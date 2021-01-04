@@ -42,3 +42,8 @@ vi /etc/fstab
 # add:
 <server IP>:/home/nfs /home/nfs_local/ nfs defaults 0 0 
 ```
+
+### Resources
+```
+https://askubuntu.com/questions/7117/which-to-use-nfs-or-samba
+```
