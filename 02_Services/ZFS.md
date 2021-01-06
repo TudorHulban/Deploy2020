@@ -1,7 +1,7 @@
 # ZFS: Installation and first steps
 Make sure the drives are connected on motherboard in the order of that the controller presents.
 ## Install ZFS
-For Ubuntu.
+For Ubuntu:
 ```bash
 sudo apt install zfsutils-linux 
 ```
