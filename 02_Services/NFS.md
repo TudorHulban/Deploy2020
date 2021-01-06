@@ -24,7 +24,7 @@ touch /home/nfs/xxx
 ### Add configuration
 ```bash
 vi /etc/exports
-/home/nfs/ 192.168.1.0(sync)
+/share-path 192.168.1.0 (rw,sync)
 ```
 Load configuration:
 ```bash
@@ -48,8 +48,14 @@ vi /etc/fstab
 <server IP>:/home/nfs /home/nfs_local/ nfs defaults 0 0 
 ```
 
+Unmount
+```bash
+sudo unmount /home/nfs_local/
+```
+
 ### Resources
 ```
 https://askubuntu.com/questions/7117/which-to-use-nfs-or-samba
 https://www.cyberciti.biz/faq/howto-see-shares-on-nfs-server-exported-filesystems/
+https://www.howtoforge.com/tutorial/how-to-configure-a-nfs-server-and-mount-nfs-shares-on-ubuntu-18.04/
 ```
