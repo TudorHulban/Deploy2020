@@ -43,6 +43,11 @@ Permanent
 vi /etc/fstab
 # add /swap.img      none    swap    sw      0       0
 ```
+### Decrease Swappiness
+```bash
+cat /proc/sys/vm/swappiness
+sudo sysctl vm.swappiness=10
+```
 ## SSH <a name="ssh"></a> ([Up](#top))
 ```bash
 ssh-keygen -t rsa -C "your.email@example.com" -b 4096
