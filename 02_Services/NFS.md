@@ -48,9 +48,13 @@ vi /etc/fstab
 <server IP>:/home/nfs /home/nfs_local/ nfs defaults 0 0 
 ```
 
-Unmount
+Unmount:
 ```bash
 sudo unmount /home/nfs_local/
+```
+Create soft link in home folder:
+```bash
+ln -s /mnt/nfs $HOME/nfs
 ```
 
 ### Resources
