@@ -1,9 +1,13 @@
 # ZFS: Installation and first steps
 Make sure the drives are connected on motherboard in the order of that the controller presents.
-## Install ZFS:
+## Install ZFS
+For Ubuntu.
 ```bash
 sudo apt install zfsutils-linux 
 ```
+### For Debian Buster
+Under review.
+
 ## List available disks and pools:
 ```bash
 sudo fdisk -l
