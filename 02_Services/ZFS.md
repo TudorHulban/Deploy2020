@@ -10,12 +10,36 @@ Under review.
 
 ## List available disks and pools:
 ```bash
-sudo fdisk -l
+sudo fdisk -l  # or lsblk
 sudo zpool list
 ```
+
+## Create aliases for drives
+For the case where the drives in the pool get unpluged.
+```bash
+cd /dev/disk/by-id
+ll ata* -ltr
+
+sudo vi /etc/zfs/vdev_id.conf
+```
+Add:
+```
+alias 01   /dev/disk/by-id/disk identifier as per ll ata* -ltr
+```
+Apply the aliases:
+```bash
+sudo udevadm trigger
+```
+Check aliases:
+```bash
+cd /dev/disk/by-vdev
+```
+
 ## Create mirror pool:
 ```bash
 sudo zpool create -f -o ashift=12 <pool name> mirror /dev/sda /dev/sdb
+# with aliases
+sudo zpool create <pool name> mirror 01 02
 ```
 Check created pool:
 ```bash
