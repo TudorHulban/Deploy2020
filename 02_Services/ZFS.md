@@ -45,6 +45,7 @@ Check created pool:
 ```bash
 sudo zpool status <pool name> 
 sudo zfs get all 
+zpool list -v
 ```
 ## Create pool raid 0:
 ```bash
