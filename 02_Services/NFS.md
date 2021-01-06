@@ -24,7 +24,7 @@ touch /home/nfs/xxx
 ### Add configuration
 ```bash
 vi /etc/exports
-/home/nfs/ (ro,sync)
+/home/nfs/ 192.168.1.0(sync)
 ```
 Load configuration:
 ```bash
