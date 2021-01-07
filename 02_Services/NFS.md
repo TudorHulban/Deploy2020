@@ -57,6 +57,11 @@ Create soft link in home folder:
 ln -s /mnt/nfs $HOME/nfs
 ```
 
+Create entry for host for easier referral:
+```bash
+sudo vi /etc/hosts
+```
+
 ### Resources
 ```
 https://askubuntu.com/questions/7117/which-to-use-nfs-or-samba
