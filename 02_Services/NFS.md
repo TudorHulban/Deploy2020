@@ -67,4 +67,5 @@ sudo vi /etc/hosts
 https://askubuntu.com/questions/7117/which-to-use-nfs-or-samba
 https://www.cyberciti.biz/faq/howto-see-shares-on-nfs-server-exported-filesystems/
 https://www.howtoforge.com/tutorial/how-to-configure-a-nfs-server-and-mount-nfs-shares-on-ubuntu-18.04/
+https://www.tecmint.com/setup-local-dns-using-etc-hosts-file-in-linux/
 ```
