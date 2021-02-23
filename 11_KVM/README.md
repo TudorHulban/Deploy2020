@@ -8,8 +8,9 @@ sudo kvm-ok   # check if system supports KVM virtualization
 sudo apt install cpu-checker
 ```
 ## Installation on XUbuntu
+Package `virt-manager` needed also for starting `libvirt` service.
 ```bash
-sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils
+sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
 ```
 Check if the virtualization daemon – libvritd-daemon – is running:
 ```bash
