@@ -40,7 +40,7 @@ sudo virt-install --name=slitaz-vm \
 ```
 ### GUI
 ```bash
-virt manager
+sudo virt-manager
 ```
 
 ## Resources
