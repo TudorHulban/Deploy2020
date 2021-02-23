@@ -17,7 +17,7 @@ sudo systemctl status libvirtd
 ```
 Add current user to the libvirtd group:
 ```
-sudo adduser name libvirtd
+sudo adduser `user name` libvirtd
 ```
 
 ## Resources
