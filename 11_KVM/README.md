@@ -20,6 +20,15 @@ Add current user to the libvirtd group:
 ```
 sudo adduser `user name` libvirtd
 ```
+Check if the KVM modules are loaded:
+```bash
+lsmod | grep -i kvm
+```
+Enable `libvirt` service at boot:
+```bash
+sudo systemctl enable --now libvirtd
+```
+## Create Virtual Machine
 
 ## Resources
 ```html
