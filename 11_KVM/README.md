@@ -15,6 +15,10 @@ Check if the virtualization daemon – libvritd-daemon – is running:
 ```bash
 sudo systemctl status libvirtd
 ```
+Add current user to the libvirtd group:
+```
+sudo adduser name libvirtd
+```
 
 ## Resources
 ```html
