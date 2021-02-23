@@ -23,4 +23,5 @@ sudo adduser name libvirtd
 ## Resources
 ```html
 https://www.tecmint.com/install-kvm-on-ubuntu/
+https://linuxconfig.org/how-to-create-and-manage-kvm-virtual-machines-from-cli
 ```
