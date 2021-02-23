@@ -29,6 +29,14 @@ Enable `libvirt` service at boot:
 sudo systemctl enable --now libvirtd
 ```
 ## Create Virtual Machine
+```bash
+sudo virt-install --name=slitaz-vm \
+--vcpus=1 \
+--memory=1024 \
+--cdrom=/home/tudi/ram/slitaz-rolling.iso \
+--disk none \
+--os-variant=generic
+```
 
 ## Resources
 ```html
