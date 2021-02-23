@@ -42,4 +42,5 @@ sudo virt-install --name=slitaz-vm \
 ```html
 https://www.tecmint.com/install-kvm-on-ubuntu/
 https://linuxconfig.org/how-to-create-and-manage-kvm-virtual-machines-from-cli
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-guest_virtual_machine_installation_overview-creating_guests_with_virt_install
 ```
