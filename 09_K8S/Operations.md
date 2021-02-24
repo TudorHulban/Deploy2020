@@ -20,3 +20,7 @@ Verify newly created namespace:
 ```bash
 kubectl get namespace
 ```
+### Resources
+```html
+https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/#working-with-namespaces
+```
