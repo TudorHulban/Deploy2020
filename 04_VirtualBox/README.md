@@ -109,4 +109,5 @@ ssh -p 2222 USER@127.0.0.1
 ## Resources
 ```html
 https://www.ostechnix.com/install-oracle-virtualbox-ubuntu-16-04-headless-server/
+http://blog.johannesmp.com/2017/01/25/port-forwarding-ssh-from-virtualbox/
 ```
