@@ -23,4 +23,5 @@ kubectl get namespace
 ### Resources
 ```html
 https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/#working-with-namespaces
+https://www.fosstechnix.com/how-to-create-new-namespace-in-kubernetes/
 ```
