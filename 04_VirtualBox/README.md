@@ -93,6 +93,19 @@ vi /etc/default/virtualbox
 Reboot.
 ## Connect
 Login with admin/admin at ip/phpvirtualbox.
+
+### SSH
+Create in VM network settings a port forwarding with:<br/>
+- protocol: TCP
+- host IP: 127.0.0.1
+- host port: 2222
+- guest IP: 10.0.2.15 (VM IP)
+- guest port: 22
+
+Connect from host:
+```bash
+ssh -p 2222 USER@127.0.0.1
+```
 ## Resources
 ```html
 https://www.ostechnix.com/install-oracle-virtualbox-ubuntu-16-04-headless-server/
