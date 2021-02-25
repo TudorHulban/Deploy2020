@@ -13,6 +13,10 @@ Search and install charts:
 helm search repo haproxytech/
 helm install my-release haproxytech/<chart>
 ```
+Verify:
+```bash
+kubectl get all
+```
 
 ## Resources
 ```html
