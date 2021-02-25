@@ -21,4 +21,5 @@ kubectl get all
 ## Resources
 ```html
 https://thenewstack.io/kubernetes-ingress-for-beginners/
+https://devopscube.com/setup-ingress-kubernetes-nginx-controller/
 ```
