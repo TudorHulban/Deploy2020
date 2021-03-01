@@ -179,7 +179,12 @@ sudo rm /etc/apt/sources.list.d/ppa_shutter_ppa_tara.list
 https://soundconverter.org/
 ```
 ### Youtube downloader
+```bash
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
 ```
+Resources
+```html
 https://ytdl-org.github.io/youtube-dl/download.html
 ```
 
