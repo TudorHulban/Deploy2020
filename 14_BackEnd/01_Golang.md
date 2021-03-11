@@ -3,7 +3,7 @@
 Add environment variables for default bash shell in.
 ```bash
 vi $HOME/.bashrc
-export GO111MODULE=on
+# export GO111MODULE=on - not needed with 1.16+
 export PATH=$PATH:/usr/local/go/bin # for test system: export PATH=$PATH:$HOME/go/bin
 # if not working try $HOME/.profile
 ```
