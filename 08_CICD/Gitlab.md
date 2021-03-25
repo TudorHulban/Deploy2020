@@ -19,6 +19,12 @@ Install the latest version of GitLab Runner
 ```
 export GITLAB_RUNNER_DISABLE_SKEL=true; sudo -E apt-get install gitlab-runner
 ```
+Register runner<br/>
+Instructions can be found in project - CI / CD - runners - show runner installation instructions, consider also:
+```
+sudo gitlab-runner register --url http://192.168.1.35/ --registration-token g7-xfhXAjz77ooikfBLV
+```
+
 
 ##### Resources
 ```
