@@ -33,6 +33,14 @@ https://docs.gitlab.com/runner/install/linux-repository.html#installing-gitlab-r
 ```
 
 ### Operations
+#### Apply changes
+```
+sudo gitlab-ctl reconfigure
+```
+### Restart
+```
+sudo service gitlab restart
+```
 #### Reset root password
 Takes some time to process.
 ```bash
