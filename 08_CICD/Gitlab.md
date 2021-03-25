@@ -24,10 +24,11 @@ Instructions can be found in project - CI / CD - runners - show runner installat
 ```
 sudo gitlab-runner register --url http://192.168.1.35/ --registration-token g7-xfhXAjz77ooikfBLV
 ```
-
+You might want to consider disabling other runners for the project.
 
 ##### Resources
 ```
+https://www.youtube.com/watch?v=G8ZONHOTAQk
 https://docs.gitlab.com/runner/install/linux-repository.html#installing-gitlab-runner
 ```
 
