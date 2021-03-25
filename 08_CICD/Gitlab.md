@@ -9,3 +9,10 @@ Update system and then run with sudo as per:
 ```html
 https://about.gitlab.com/install/#debian
 ```
+
+### Operations
+#### Reset root password
+Takes some time to process.
+```bash
+sudo gitlab-rake "gitlab:password:reset[root]"
+```
