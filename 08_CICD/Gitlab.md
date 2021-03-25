@@ -10,6 +10,21 @@ Update system and then run with sudo as per:
 https://about.gitlab.com/install/#debian
 ```
 
+#### Install Gitlab Runner
+Add the official GitLab repository
+```
+curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
+```
+Install the latest version of GitLab Runner
+```
+export GITLAB_RUNNER_DISABLE_SKEL=true; sudo -E apt-get install gitlab-runner
+```
+
+##### Resources
+```
+https://docs.gitlab.com/runner/install/linux-repository.html#installing-gitlab-runner
+```
+
 ### Operations
 #### Reset root password
 Takes some time to process.
