@@ -149,6 +149,7 @@ sudo docker ps -a
 #### List containers
 ```bash
 docker ps -a
+docker ps --format "table {{.ID}}\t{{.Status}}\t{{.Names}}"
 ```
 #### Start container
 ```bash
