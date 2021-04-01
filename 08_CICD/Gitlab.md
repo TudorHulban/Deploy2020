@@ -1,5 +1,9 @@
 ## Gitlab Installation
 ### Debian 10.7
+Install locales for PostgreSQL
+```bash
+sudo apt-get install locales-all
+```
 Set language variables
 ```bash
 export LC_ALL="en_US.UTF-8"
