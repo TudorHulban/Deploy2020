@@ -205,6 +205,10 @@ ports, or the -P flag to publish all exposed ports and map them to high-order po
 See: https://docs.docker.com/engine/examples/running_ssh_service/ .
 
 ## Troubleshooting <a name="tshoot"></a> ([Up](#top))
+Resource consumption:
+```shell
+docker ps -q | xargs  docker stats --no-stream
+```
 Masked docker service:<br/>
 Unmask 
 ```bash
