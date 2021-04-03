@@ -73,3 +73,7 @@ Exec=pcmanfm -n "/media/tudi/system/01_ToRead/Go_Books (from vault)"
 Name=Go
 GenericName=Go
 ```
+## Resources
+```
+https://techguides.yt/guides/secure-linux-server/
+```
