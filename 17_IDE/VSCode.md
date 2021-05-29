@@ -1,5 +1,15 @@
 # VS Code SetUp and Configuration
 
+## Default Emmet enabling
+```
+{
+    "emmet.triggerExpansionOnTab": true,
+    "files.associations": {
+        "*html": "html"
+    },
+}
+```
+
 ## Plugins
 - Todo Tree
 
