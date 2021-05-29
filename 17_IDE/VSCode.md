@@ -1,6 +1,7 @@
 # VS Code SetUp and Configuration
 
 ## Default Emmet enabling
+Append to `settings.json`:
 ```
 {
     "emmet.triggerExpansionOnTab": true,
